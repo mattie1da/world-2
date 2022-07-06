@@ -1,0 +1,48 @@
+.title {
+  font-size: var(--heading3);
+  margin-bottom: 0rem;
+}
+
+.subTitle {
+  color: rgb(var(--secondary));
+  font-weight: normal;
+}
+
+.description {
+  font-size: var(--heading4);
+  margin: 0;
+}
+
+.wrapper {
+  line-height: 1;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.temperature {
+  font-size: clamp(8rem, 8vw, 11rem);
+  font-weight: bold;
+  margin-right: 2rem;
+}
+
+.farenheit {
+  color: rgb(var(--secondary));
+  font-family: var(--fontCute);
+  font-size: 1rem;
+  font-weight: normal;
+  position: absolute;
+  left: 0;
+  bottom: -1rem;
+}
+
+.button {
+  appearance: none;
+  background: none;
+  border: none;
+  color: hsl(var(--theme), var(--palette-saturation), var(--palette-lightness));
+  cursor: pointer;
+  display: flex;
+  font-family: var(--fontCute);
+  outline: none;
+  padding: 0;
+}

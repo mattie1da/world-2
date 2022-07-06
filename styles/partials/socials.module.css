@@ -1,0 +1,46 @@
+.wrapper {
+  display: inline-grid;
+  grid-gap: 0.75rem;
+  grid-auto-flow: column;
+  grid-template-columns: repeat(5, auto);
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.wrapper a:hover {
+  color: currentColor;
+}
+
+.email {
+  grid-row: 2;
+  grid-column: 1 / -1;
+  justify-self: end;
+}
+
+.link {
+  display: flex;
+}
+
+.twitter:hover svg {
+  background-color: #1DA1F2;
+  border-radius: 0.4rem;
+}
+
+.linkedIn:hover svg {
+  background-color: #0072b1;
+  border-radius: 0.2rem;
+}
+
+.strava path {
+  fill: rgb(var(--pageBackgroundColor));
+}
+
+.strava:hover path {
+  fill: #FC6100
+}
+
+.instagram:hover svg {
+  background: linear-gradient(to top, #F58529, #FEDA77, #DD2A7B, #8134AF, #515BD4);
+  border-radius: 0.5rem;
+}

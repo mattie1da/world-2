@@ -1,0 +1,40 @@
+.highlight {
+  animation: 1s text forwards;
+  font-weight: bold;
+  padding: 0ch 0.3ch;
+  margin-left: -0.2ch;
+  margin-right: 0.05ch;
+  position: relative;
+  /* this might bite me in the ass */
+  white-space: nowrap;
+}
+
+.text {
+  z-index: 2;
+}
+
+@keyframes text {
+  0% { color: rgb(var(--primary)) }
+  100% { color: rgb(var(--tertiary)) }
+}
+
+@keyframes highlight {
+  0% { width: 0% }
+  10% { width: 2% }
+  100% { width: 100% }
+}
+
+.highlight:before {
+  animation: 0.5s highlight forwards;
+  background: linear-gradient(to bottom right, hsl(var(--theme), var(--palette-saturation), var(--palette-darken)), hsl(var(--theme), var(--palette-saturation), 18%));
+  border-radius: var(--borderMarker);
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0.15ch;
+  z-index: 1;
+  transform: rotate(0.4deg);
+  width: 0%;
+}

@@ -1,0 +1,23 @@
+.wrapper {
+  font-size: var(--bodyLarge);
+  margin-bottom: var(--space-l);
+}
+
+.wrapper:not(:last-child) {
+  padding-bottom: var(--space-s);
+}
+
+.articleBody {
+  font-size: var(--bodyLarge);
+  line-height: 1.8;
+}
+
+.articleBody:not(:last-child) {
+  margin-bottom: var(--space-s);
+}
+
+@media (min-width: 850px) {
+  .wrapper {
+    margin-bottom: var(--space-m);
+  }
+}

@@ -1,0 +1,36 @@
+.red {
+  --theme: var(--red);
+}
+
+.yellow {
+  --theme: var(--yellow);
+}
+
+.green {
+  --theme: var(--green);
+}
+
+.blue {
+  --theme: var(--blue);
+}
+
+.purple {
+  --theme: var(--purple);
+}
+
+.pink {
+  --theme: var(--pink);
+}
+
+.dark {
+  --pageBackgroundColor: rgb(var(--primary));
+  --baseFontColor: rgb(var(--tertiary));
+  --navBackgroundColor: var(--primary);
+  --palette-darken: 5%;
+  --smoke: 155, 155, 155;
+  
+  background-color: var(--pageBackgroundColor);
+  color: var(--baseFontColor);
+
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}

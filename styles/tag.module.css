@@ -1,0 +1,38 @@
+.tag {
+  color: rgb(var(--tertiary));
+  display: inline-flex;
+  font-weight: bold;
+  padding: 0.3rem 0.6rem;
+  font-size: 1rem;
+
+  text-decoration: none;
+  appearance: none;
+  background: none;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  margin: 0;
+  font-family: inherit;
+}
+
+.tag:before {
+  background-color: hsl(var(--theme), var(--palette-saturation), var(--palette-darken));
+  border-radius: 0.2rem;
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  transform: rotate(0.4deg);
+}
+
+.text {
+  z-index: 1;
+}
+
+.tag:hover,
+.tag:focus,
+.active {
+  color: hsl(var(--theme), var(--palette-saturation), var(--palette-lightness));
+}

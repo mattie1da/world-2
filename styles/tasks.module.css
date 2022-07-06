@@ -1,0 +1,68 @@
+.title {
+  font-size: var(--heading3);
+  margin-bottom: 1.5rem;
+}
+
+.title span {
+  color: rgb(var(--smoke));
+  font-weight: normal;
+}
+
+.list {
+  display: grid;
+  grid-gap: 1rem;
+  list-style: none;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+.item {
+  align-items: center;
+  display: flex;
+}
+
+.complete {
+  color: hsl(var(--theme), var(--palette-saturation), var(--palette-darken));
+  text-decoration: line-through;
+}
+
+.action {
+  cursor: pointer;
+  line-height: 0.8;
+  height: 1.3rem;
+  margin: 0 0.5rem 0 0;
+  width: 1.3rem;
+}
+
+.infinity {
+  cursor: default;
+  color: hsl(var(--theme), var(--palette-saturation), var(--palette-darken));
+  font-size: 1.5rem;
+}
+
+.angry {
+  font-family: var(--fontCute);
+  position: absolute;
+  top: 100%;
+}
+
+.fuming {
+  color: hsl(var(--error), var(--palette-saturation), var(--palette-lightness));
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.textInput {
+  appearance: none;
+  border: none;
+  cursor: text;
+  line-height: inherit;
+  font-size: inherit;
+  font-family: var(--fontPoppins);
+  width: 100%;
+}
+
+.textInput[disabled] {
+  background-color: rgb(var(--tertiary));
+  cursor: not-allowed;
+}

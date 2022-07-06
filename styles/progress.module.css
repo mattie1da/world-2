@@ -1,0 +1,49 @@
+@media (max-width: 849px) {
+  .cuteSupport, .percentage {
+    display: none;
+  }
+}
+
+.progress {
+  height: 0.5rem;
+  border-radius: 0.1rem;
+  overflow: hidden;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.progress[value]::-webkit-progress-bar {
+  background-color: rgb(var(--secondary), 0.2);
+}
+
+.progress[value]::-webkit-progress-value {
+  background-color: hsl(var(--green), var(--palette-saturation), var(--palette-lightness));
+}
+
+.complete {
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  position: absolute;
+}
+
+.cuteSupport {
+  font-size: 1rem;
+  font-family: var(--fontCute);
+  color: rgb(var(--secondary));
+}
+
+.percentage {
+  color: rgb(var(--secondary));
+  margin: 0;
+  text-align: right;
+}
+
+@media (min-width: 850px) {
+  .progress {
+    position: static;
+  }
+}

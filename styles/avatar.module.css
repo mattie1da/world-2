@@ -1,0 +1,42 @@
+.avatar {
+  align-items: center;
+  border: 2px solid hsl(var(--pink), var(--palette-saturation), var(--palette-lightness));
+  background-color: hsl(var(--pink), var(--palette-saturation), var(--palette-lightness));
+  border-radius: 50%;
+  color: rgb(var(--tertiary));
+  height: 2rem;
+  display: flex;
+  font-weight: bold;
+  justify-content: center;
+  object-fit: cover;
+  width: 2rem;
+}
+
+.avatar:not(:first-child) {
+  margin-left: -0.75rem;
+}
+
+.avatar:nth-child(2) {
+  border-color: hsl(var(--yellow), var(--palette-saturation), var(--palette-lightness));
+  background-color: hsl(var(--yellow), var(--palette-saturation), var(--palette-lightness));
+  color: rgb(var(--primary));
+}
+
+.avatar:nth-child(3) {
+  border-color: hsl(var(--green), var(--palette-saturation), var(--palette-lightness));
+  background-color: hsl(var(--green), var(--palette-saturation), var(--palette-lightness));
+}
+
+.avatar:nth-child(4) {
+  border-color: hsl(var(--blue), var(--palette-saturation), var(--palette-lightness));
+  background-color: hsl(var(--blue), var(--palette-saturation), var(--palette-lightness));
+}
+
+@media (min-width: 850px) {
+  .large {
+    border-width: 3px;
+    font-size: 1.4rem;
+    height: 3.5rem;
+    width: 3.5rem;
+  }
+}

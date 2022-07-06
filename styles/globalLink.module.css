@@ -1,0 +1,37 @@
+.link {
+  align-items: center;
+  display: inline-flex;
+  font-size: 1.125rem;
+}
+
+.link a:hover,
+.link a:focus {
+  color: hsl(var(--theme), var(--palette-saturation), var(--palette-lightness))
+}
+
+.accent {
+  color: hsl(var(--theme), var(--palette-saturation), var(--palette-lightness))
+}
+
+.arrow {
+  animation: wavy 2s infinite;
+  display: inline-block;
+}
+
+.link:hover .arrow {
+  animation: bounce 1.5s infinite;
+}
+
+@keyframes wavy {
+  0% { transform: translateX(0rem) }
+  50% { transform: translateX(0.2rem) }
+  100% { transform: translateX(0rem) }
+}
+
+@keyframes bounce {
+  0% { transform: translateX(0rem) }
+  20% { transform: translateX(0.5rem) }
+  40% { transform: translateX(0rem) }
+  60% { transform: translateX(0.3rem) }
+  80% { transform: translateX(0rem) }
+}

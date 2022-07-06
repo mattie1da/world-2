@@ -1,0 +1,10 @@
+.wrapper {
+  align-self: center;
+  display: flex;
+  gap: var(--space-xs);
+  width: 100%;
+}
+
+.wrapper p {
+  margin: 0;
+}

@@ -1,0 +1,36 @@
+.blob {
+  animation: lava 45s ease-in-out infinite alternate;
+  position: absolute;
+  max-width: 85vw;
+}
+
+.blob path {
+  transition: fill 0.2s ease-in-out;
+}
+
+.blob:nth-of-type(odd) {
+  left: calc(var(--space-l) * -2.75);
+}
+
+.blob:nth-of-type(even) {
+  right: calc(var(--space-l) * -2.75);
+}
+
+@keyframes lava {
+  from { transform: rotate(0) }
+  to { transform: rotate(30deg) scale(1.2) }
+}
+
+@media (min-width: 1150px) {
+  .blob {
+    max-width: 35vw;
+  }
+
+  .blob:nth-of-type(odd) {
+    left: calc(var(--space-l) * -1.5)
+  }
+  
+  .blob:nth-of-type(even) {
+    right: calc(var(--space-l) * -1.5);
+  }
+}

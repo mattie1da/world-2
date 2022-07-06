@@ -1,0 +1,42 @@
+.tape {
+  background-color: hsl(var(--theme), var(--palette-saturation), var(--palette-lightness));
+  position: absolute;
+  top: -1.5rem;
+  height: 2.5rem;
+  width: 40%;
+  opacity: 0.9;
+  transition: background-color 0.2s ease-in;
+  z-index: 1;
+}
+
+.left {
+  transform: rotate(-2deg);
+  left: 20%;
+}
+
+.right {
+  transform: rotate(2deg);
+  left: 45%;
+}
+
+.large {
+  width: 60%;
+}
+
+.corner {
+  right: -1rem;
+  transform: rotate(7deg);
+  width: 8rem;
+}
+
+@media (min-width: 850px) {
+  .tape {
+    height: 3.5rem;
+    top: -2rem;
+  }
+
+  .corner {
+    right: -2rem;
+    transform: rotate(19deg);
+  }
+}

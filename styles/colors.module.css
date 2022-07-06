@@ -1,0 +1,81 @@
+.color {
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+  height: 3rem;
+  margin: 0;
+  padding: 0;
+  opacity: 0.4;
+  transition: opacity 0.1s ease-in-out, border-radius 0.1s ease-in-out;
+  width: 5rem;
+  scroll-snap-align: start;
+}
+
+.small {
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+.active {
+  opacity: 1;
+}
+
+.active.small {
+  border-radius: 0.25rem;
+}
+
+.color:hover {
+  opacity: 1;
+}
+
+.yellow {
+  background-color: hsl(var(--yellow), var(--palette-saturation), var(--palette-lightness));
+}
+
+.green {
+  background-color: hsl(var(--green), var(--palette-saturation), var(--palette-lightness));
+}
+
+.red {
+  background-color: hsl(var(--red), var(--palette-saturation), var(--palette-lightness));
+}
+
+.pink {
+  background-color: hsl(var(--pink), var(--palette-saturation), var(--palette-lightness));
+}
+
+.blue {
+  background-color: hsl(var(--blue), var(--palette-saturation), var(--palette-lightness));
+}
+
+.purple {
+  background-color: hsl(var(--purple), var(--palette-saturation), var(--palette-lightness));
+}
+
+.modeToggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  outline: none;
+  font-size: 1.2rem;
+}
+
+@media (min-width: 850px) {
+  .color {
+    border-radius: 50%;
+    height: 4rem;
+    width: 4rem;
+  }
+
+  .active {
+    border-radius: 1rem;
+  }
+
+  .small {
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+}

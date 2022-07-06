@@ -11,7 +11,7 @@ export const Quote = ({ text, author }: QuoteInterface) => {
   return (
     <figure className={styles.wrapper}>
       <blockquote className={styles.quote}>
-        <em>{text}"</em>
+        {text}"
       </blockquote>
       <figcaption className={styles.author}>{author}</figcaption>
     </figure>

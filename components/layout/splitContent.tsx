@@ -25,7 +25,7 @@ export const SplitContent = () => {
           className={styles.media}
           controls
           loop
-          poster="/videos/st-georges-poster.png"
+          poster="/videos/st-georges-poster.jpeg"
         >
           <source src="/videos/st-georges.mp4" type="video/mp4" />
           <source src="movie.ogg" type="video/ogg" />

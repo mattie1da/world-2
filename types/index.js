@@ -1,0 +1,5 @@
+export { AuthorInterface } from './author'
+export { BreadcrumbInterface } from './breadcrumb'
+export { BlogItemInterface } from './blogItem'
+export { TapeInterface } from './tape'
+export { VillagerInterface } from './villager'

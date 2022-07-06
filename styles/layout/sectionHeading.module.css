@@ -3,7 +3,8 @@
 }
 
 .title {
-  max-width: 13em;
+  max-width: 13.3em;
+  letter-spacing: -0.025ch;
 }
 
 .preTitle {

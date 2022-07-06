@@ -39,6 +39,7 @@
   
 .date {
   font-size: var(--heading3);
+  letter-spacing: -0.03ch;
   font-weight: normal;
   margin-bottom: 0;
 }

@@ -3,6 +3,9 @@ import Head from 'next/head'
 import { getAllBlogTags, getBlogs } from '../../lib/blog'
 import { getGlobalSettings } from '../../lib/global'
 
+// styles
+import utilStyles from '../../styles/utils.module.css'
+
 // components
 import { Layout, Hero, Container } from '../../components/layout'
 import { BlogList } from '../../components/blog'
@@ -39,6 +42,7 @@ export default function Blogs({ allBlogsData, globalSettingsData, tagsData }) {
       <BlobFour />
       
       <Container>
+        <h2 className={utilStyles.visuallyHidden}>Entries:</h2>
         <BlogList allBlogsData={allBlogsData} />
       </Container>
 

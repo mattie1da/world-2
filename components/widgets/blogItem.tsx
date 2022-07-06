@@ -22,10 +22,10 @@ export const BlogItem = ({
         <Tag name={tag} />
       </aside>
       <div className={styles.thumbnailWrapper}>
-        <Image 
+        <Image
           className={styles.thumbnail}
           src={image.url}
-          layout="fill" 
+          layout="fill"
           objectFit="cover"
           alt={image.alt}
         />

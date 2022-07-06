@@ -56,9 +56,12 @@ export const Hero = ({
     >
       {image && (
         <>
-          <Image className={styles.image}
+          <Image
+            className={styles.image}
             src={image.url}
-            alt={image.alt} layout="fill" objectFit="cover" 
+            alt={image.alt}
+            layout="fill"
+            objectFit="cover"
           />
           <span className={styles.imageWash} />
         </>

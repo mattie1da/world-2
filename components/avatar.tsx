@@ -12,16 +12,18 @@ interface AvatarInterface {
 
 export const Avatar = ({ author, size }: AvatarInterface) => {
   return (
-    <div className={classnames(styles.avatar, {
+    <div
+      className={classnames(styles.avatar, {
         [styles.large]: size === 'large'
-      })}>
-        <Image 
-          src={author.picture.url} 
-          layout="fill" 
-          objectFit="cover"
-          alt={`Headshot of ${author.name}`} 
-          title={author.name} 
-        />
-      </div>
+      })}
+    >
+      <Image
+        src={author.picture.url}
+        layout="fill"
+        objectFit="cover"
+        alt={`Headshot of ${author.name}`}
+        title={author.name}
+      />
+    </div>
   );
 };

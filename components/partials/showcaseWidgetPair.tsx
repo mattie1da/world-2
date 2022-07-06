@@ -134,8 +134,11 @@ export const ShowcaseWidgetPair = ({ villagersData, featuredBlog }) => {
             }
           ]}
           image={
-            <div className={styles.animalWrapper} style={{ borderColor: villagerToShow.color }}>
-              <Image 
+            <div
+              className={styles.animalWrapper}
+              style={{ borderColor: villagerToShow.color }}
+            >
+              <Image
                 className={styles.animal}
                 src={villagerToShow.image.url}
                 style={{ borderColor: villagerToShow.color }}

@@ -11,11 +11,11 @@ export const SplitContent = () => {
         className={classnames(styles.scrollBox, styles.boxGradientPrimary)}
       >
         <div className={styles.media}>
-          <Image 
+          <Image
             src="/images/projects/todooo-today.jpg"
             alt="Todo Today - Task List"
             layout="fill"
-            objectFit='cover'
+            objectFit="cover"
           />
         </div>
         <figcaption className={styles.caption}>Todo List App (Vue)</figcaption>
@@ -39,11 +39,11 @@ export const SplitContent = () => {
         className={classnames(styles.scrollBox, styles.boxGradientSecondary)}
       >
         <div className={styles.media}>
-          <Image 
+          <Image
             src="/images/projects/polar.jpg"
             alt="Polar Skate Co - Redesign"
             layout="fill"
-            objectFit='cover'
+            objectFit="cover"
           />
         </div>
         <figcaption className={styles.caption}>
@@ -54,11 +54,11 @@ export const SplitContent = () => {
         className={classnames(styles.scrollBox, styles.boxGradientTertiary)}
       >
         <div className={styles.media}>
-          <Image 
+          <Image
             src="/images/projects/world.jpg"
             alt="Matthew Wyatt Portfolio Website"
-            layout='fill'
-            objectFit='cover'
+            layout="fill"
+            objectFit="cover"
           />
         </div>
         <figcaption className={styles.caption}>

@@ -1,7 +1,8 @@
 .blob {
   animation: lava 45s ease-in-out infinite alternate;
   position: absolute;
-  max-width: 85vw;
+  max-width: 22rem;
+  filter: blur(0.5rem);
 }
 
 .blob path {
@@ -21,9 +22,15 @@
   to { transform: rotate(30deg) scale(1.2) }
 }
 
-@media (min-width: 1150px) {
+@media (min-width: 850px) {
   .blob {
-    max-width: 35vw;
+    max-width: 52rem;
+  }
+}
+
+@media (min-width: 1250px) {
+  .blob {
+    max-width: 33rem;
   }
 
   .blob:nth-of-type(odd) {
@@ -32,5 +39,11 @@
   
   .blob:nth-of-type(even) {
     right: calc(var(--space-l) * -1.5);
+  }
+}
+
+@media (min-width: 1600px) {
+  .blob {
+    max-width: 40rem;
   }
 }

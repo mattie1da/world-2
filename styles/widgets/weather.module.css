@@ -20,7 +20,7 @@
 }
 
 .temperature {
-  font-size: var(--heading1);
+  font-size: clamp(5rem, 15vw, 8rem);
   font-weight: bold;
   margin-right: 2rem;
 }
@@ -47,8 +47,8 @@
   padding: 0;
 }
 
-@media (min-width: 1700px) {
+@media (min-width: 1150px) {
   .temperature {
-    font-size: clamp(8rem, 8vw, 11rem);
+    font-size: clamp(5rem, 8vw, 11rem);
   }
 }

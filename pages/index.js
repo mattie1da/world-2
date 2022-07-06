@@ -38,7 +38,7 @@ export default function Home({ allBlogsData, globalSettingsData, villagersData }
       />
       <Palette />
       <BlobSeven />
-      <Widgets featuredArticle={allBlogsData.find(article => article.id === 7)} />
+      <Widgets featuredArticle={allBlogsData.find(article => article.id === 6)} />
       <BlobFive />
       <BlobSix />
       <Container thin>
@@ -48,7 +48,7 @@ export default function Home({ allBlogsData, globalSettingsData, villagersData }
             title: <>I design, <Highlight text="build" /> <span className={utilStyles.textSmoke}>and maintain</span> websites and apps 📱🖥⚡️</>
           }}
           content={
-            <ShowcaseWidgetPair villagersData={villagersData} featuredBlog={allBlogsData.find(article => article.id === 6)} />
+            <ShowcaseWidgetPair villagersData={villagersData} featuredBlog={allBlogsData.find(article => article.id === 5)} />
           }
         />
       </Container>

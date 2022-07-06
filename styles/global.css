@@ -52,7 +52,7 @@
   --heading3: clamp(1.3rem, 2.5vw, 1.6rem);
   --heading4: clamp(1.1rem, 1.8vw, 1.2rem);
   
-  --fontPoppins: 'Inter', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  --fontInter: 'Inter', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   --fontCute: 'Gaegu', cursive;
 
 }
@@ -99,7 +99,7 @@ body {
   color: var(--baseFontColor);
   padding: 0;
   margin: 0;
-  font-family: var(--fontPoppins);
+  font-family: var(--fontInter);
   line-height: 1.5;
   letter-spacing: -0.02ch;
   font-size: 16px;

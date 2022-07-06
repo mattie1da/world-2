@@ -6,6 +6,7 @@ import { Card, ErrorButton } from '../../components';
 import { BlogItem, DataWidget } from '../../components/widgets';
 import { useState } from 'react';
 import { getVillager } from '../../lib/villagers';
+import Image from 'next/image';
 
 export const ShowcaseWidgetPair = ({ villagersData, featuredBlog }) => {
   const [loading, setLoading] = useState(false);
@@ -133,11 +134,16 @@ export const ShowcaseWidgetPair = ({ villagersData, featuredBlog }) => {
             }
           ]}
           image={
-            <img
-              src={villagerToShow.image.url}
-              style={{ borderColor: villagerToShow.color }}
-              alt={`Headshot of ${villagerToShow.name}`}
-            />
+            <div className={styles.animalWrapper} style={{ borderColor: villagerToShow.color }}>
+              <Image 
+                className={styles.animal}
+                src={villagerToShow.image.url}
+                style={{ borderColor: villagerToShow.color }}
+                alt={`Headshot of ${villagerToShow.name}`}
+                layout="fill"
+                objectFit="cover"
+              />
+            </div>
           }
           // only show the button if we manage to fetch from the villagers api in the first place
           button={

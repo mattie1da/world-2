@@ -11,7 +11,6 @@ interface AvatarsInterface {
 export const Avatars = ({ authors, size }: AvatarsInterface) => {
   return (
     <div className={styles.wrapper}>
-      {/* TODO: deconstruct author to name and image */}
       {authors.map((author, index) => (
         <Avatar key={index} author={author} size={size} />
       ))}

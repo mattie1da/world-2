@@ -1,4 +1,3 @@
-// TODO: Next Image
 import Image from 'next/image';
 
 import styles from '../styles/avatar.module.css';
@@ -13,14 +12,16 @@ interface AvatarInterface {
 
 export const Avatar = ({ author, size }: AvatarInterface) => {
   return (
-    // change this to a <figure> with a figcaption that appears on hover?
-    <img
-      className={classnames(styles.avatar, {
+    <div className={classnames(styles.avatar, {
         [styles.large]: size === 'large'
-      })}
-      src={author.picture.url}
-      alt={`Headshot of ${author.name}`}
-      title={author.name}
-    />
+      })}>
+        <Image 
+          src={author.picture.url} 
+          layout="fill" 
+          objectFit="cover"
+          alt={`Headshot of ${author.name}`} 
+          title={author.name} 
+        />
+      </div>
   );
 };

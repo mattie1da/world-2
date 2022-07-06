@@ -3,7 +3,6 @@ import styles from '../../styles/partials/companies.module.css';
 export const Companies = () => {
   return (
     <div className={styles.wrapper}>
-      {/* TODO: react image */}
       <svg
         width="75"
         height="20"

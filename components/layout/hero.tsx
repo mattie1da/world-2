@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 import { useContext } from 'react';
 import { GlobalStateContext } from '../../context/themePreferencesContext';
 
@@ -54,10 +56,9 @@ export const Hero = ({
     >
       {image && (
         <>
-          <img
-            className={styles.image}
-            src={`http://localhost:1337${image.url}`}
-            alt={image.alt}
+          <Image className={styles.image}
+            src={image.url}
+            alt={image.alt} layout="fill" objectFit="cover" 
           />
           <span className={styles.imageWash} />
         </>

@@ -3,6 +3,14 @@
   margin-left: 0;
 }
 
+.animalWrapper {
+  border: 0.2rem solid;
+  transition: border-color 0.5s;
+  margin: var(--space-xs) 0;
+  width: 100%;
+  height: 50vw;
+  object-fit: cover;
+}
 
 @media (max-width: 849px) {
   .content:nth-child(4) {
@@ -21,5 +29,15 @@
   
   .wrapper > :nth-child(3) {
     transform: rotate(-1deg);
+  }
+
+  .animalWrapper {
+    animation: wiggle 1.5s linear infinite;
+    border-width: 0.4rem;
+    border-radius: 50%;
+    margin: 0;
+    width: 7rem;
+    height: 7rem;
+    overflow: hidden;
   }
 }

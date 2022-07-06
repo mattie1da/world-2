@@ -86,6 +86,10 @@
 }
 
 @media (min-width: 1600px) {
+  .header {
+    margin-bottom: var(--space-xs);
+  }
+
   .thumbnailWrapper {
     height: 100%;
   }

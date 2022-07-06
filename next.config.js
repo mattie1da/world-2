@@ -4,6 +4,7 @@ module.exports = {
     defaultLocale: "en",
   },
   images: {
-    domains: ["res.cloudinary.com"],
+    // cloudinary, spotify, animal crossing
+    domains: ["res.cloudinary.com", "i.scdn.co", "acnhapi.com"], 
   },
 };

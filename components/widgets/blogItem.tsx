@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 import styles from '../../styles/widgets/blogItem.module.css';
 
@@ -20,9 +21,14 @@ export const BlogItem = ({
       <aside className={styles.tag}>
         <Tag name={tag} />
       </aside>
-      {/* TODO: next image */}
       <div className={styles.thumbnailWrapper}>
-        <img className={styles.thumbnail} src={image.url} alt={image.alt} />
+        <Image 
+          className={styles.thumbnail}
+          src={image.url}
+          layout="fill" 
+          objectFit="cover"
+          alt={image.alt}
+        />
       </div>
       <div className={styles.body}>
         <header className={styles.header}>

@@ -5,6 +5,7 @@ import querystring from 'querystring';
 import styles from '../../styles/widgets/spotify.module.css';
 
 import { Status, ErrorButton } from '..';
+import Image from 'next/image';
 
 export const SpotifyWidget = () => {
   const [loading, setLoading] = useState(true);
@@ -140,10 +141,12 @@ export const SpotifyWidget = () => {
           }}
         >
           {!loading && spotifyData && (
-            <img
+            <Image 
               className={styles.thumbnail}
               src={spotifyData.album}
               alt={`${spotifyData.name} album cover`}
+              layout="fill"
+              objectFit="cover"
             />
           )}
         </div>

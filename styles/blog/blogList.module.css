@@ -1,0 +1,25 @@
+.wrapper {
+  display: grid;
+  grid-gap: var(--space-m);
+  padding-left: 0;
+  list-style: none;
+}
+
+.wrapper li {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+@media (min-width: 850px) {
+  .wrapper {
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-gap: var(--space-m) var(--space-s);
+  }
+}
+
+@media (min-width: 1150px) {
+  .wrapper {
+    grid-gap: var(--space-xs);
+  }
+}

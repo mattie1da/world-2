@@ -1,0 +1,11 @@
+.wrapper {
+  margin-top: var(--space-s);
+}
+
+.header {
+  margin-bottom: var(--space-xs);
+}
+
+.footer {
+  margin-top: var(--space-xs);
+}

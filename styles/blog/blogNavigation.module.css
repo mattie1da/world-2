@@ -1,0 +1,38 @@
+@media (max-width: 849px) {
+  .nav {
+    grid-row: 1;
+  }
+}
+
+.list {
+  display: grid;
+  grid-gap: 0.25rem;
+  list-style: none;
+  margin-bottom: var(--space-xs);
+  padding-left: 0;
+  max-height: 20rem;
+  overflow: auto;
+  padding-bottom: 4rem;
+
+  -webkit-mask-image: linear-gradient(to bottom, white 75%, transparent 100%);
+  mask-image: linear-gradient(to bottom, white 75%, transparent 100%);
+}
+
+.item {
+  color: rgb(var(--secondary));
+  text-decoration: none;
+  transition: color 0.5s ease;
+}
+
+.active {
+  color: rgb(var(--baseFontColor));
+}
+
+@media (min-width: 850px) {
+  .wrapper {
+    padding-left: var(--space-s);
+    position: sticky;
+    top: var(--space-l);
+    width: 75%;
+  }
+}

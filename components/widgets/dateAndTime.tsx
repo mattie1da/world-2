@@ -14,18 +14,23 @@ export const DateAndTime = () => {
       month: 'long'
     });
   const currentTime = () => {
-    // TODO: tidy up dates x
+    const complete = new Date().toLocaleTimeString('en-GB', {
+      timeZone: 'Europe/London',
+      hour: '2-digit',
+      minute: '2-digit'
+    });
+
+    const timeArr = complete.split(':');
+    const hour = timeArr[0];
+    const minutes = timeArr[1];
+
     return {
       hour24: {
-        complete: new Date().toLocaleTimeString('en-GB', {
-          timeZone: 'Europe/London',
-          hour: '2-digit',
-          minute: '2-digit'
-        }),
-        hours: (new Date().getHours() < 10 && '0') + new Date().getHours(),
-        minutes: (new Date().getMinutes() < 10 && '0') + new Date().getMinutes()
+        complete: complete,
+        hours: hour.length === 1 ? `0${hour}` : hour,
+        minutes: minutes.length === 1 ? `0${minutes}` : minutes
       },
-      hour12: new Date().toLocaleTimeString('en-US', {
+      hour12: new Date().toLocaleTimeString('en-GB', {
         timeZone: 'Europe/London',
         hour: 'numeric',
         minute: 'numeric',
@@ -37,13 +42,13 @@ export const DateAndTime = () => {
   const [date, setDate] = useState(currentDate());
 
   const cuteWording = () => {
-    const hour = new Date().getHours();
+    const hour = currentTime().hour24.hours;
 
-    if (hour === 12) {
+    if (hour === '12') {
       return "it's lunch time, brb!";
-    } else if (hour >= 13 && hour <= 23) {
+    } else if (hour >= '13' && hour <= '23') {
       return `${time.hour12} for normal people`;
-    } else if (hour <= 6) {
+    } else if (hour <= '6') {
       return "i'm probably sleeping";
     } else {
       return 'good morning! coffee time';
@@ -51,7 +56,7 @@ export const DateAndTime = () => {
   };
 
   useEffect(() => {
-    const eggs = setInterval(() => {
+    const checkTime = setInterval(() => {
       setTime(currentTime());
 
       if (time.hour24.complete === '00:00') {
@@ -59,7 +64,7 @@ export const DateAndTime = () => {
       }
     }, 1000);
 
-    return () => clearInterval(eggs);
+    return () => clearInterval(checkTime);
   }, []);
   return (
     <>

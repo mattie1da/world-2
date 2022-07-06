@@ -71,17 +71,23 @@
 
 @media (min-width: 850px) {
   .thumbnailWrapper {
-    height: 20rem;
+    height: 10vw;
+  }
+
+  .header {
+    margin-bottom: var(--space-xs);
   }
 }
 
 @media (min-width: 1150px) {
-  .thumbnailWrapper {
-    height: 100%;
-  }
-
   .header {
     margin-bottom: var(--space-xxs);
+  }
+}
+
+@media (min-width: 1600px) {
+  .thumbnailWrapper {
+    height: 100%;
   }
   
   .title, .description {
@@ -111,12 +117,4 @@
   .description {
     max-width: 12em;
   }
-}
-
-@media (min-width: 1150px) and (max-width: 1699px) {
-  /* .thumbnail {
-    border-top-right-radius: var(--cardBorderRadius);
-    border-bottom-left-radius: 0;
-    max-height: 8rem;
-  } */
 }

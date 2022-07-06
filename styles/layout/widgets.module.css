@@ -84,6 +84,7 @@
 @media (min-width: 1150px) {
   .grid {
     grid-gap: var(--space-xs);
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
@@ -94,7 +95,6 @@
 
   .grid {
     align-items: center;
-    grid-template-columns: 1fr 1fr 1fr;
     margin-bottom: var(--space-s);
     max-width: var(--containerMaxWidth);
   }

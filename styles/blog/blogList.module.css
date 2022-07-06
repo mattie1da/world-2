@@ -13,13 +13,14 @@
 
 @media (min-width: 850px) {
   .wrapper {
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-template-columns: 1fr 1fr;
     grid-gap: var(--space-m) var(--space-s);
   }
 }
 
 @media (min-width: 1150px) {
   .wrapper {
+    grid-template-columns: repeat(3, 1fr);
     grid-gap: var(--space-xs);
   }
 }

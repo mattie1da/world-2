@@ -20,7 +20,7 @@
 }
 
 .temperature {
-  font-size: clamp(8rem, 8vw, 11rem);
+  font-size: var(--heading1);
   font-weight: bold;
   margin-right: 2rem;
 }
@@ -45,4 +45,10 @@
   font-family: var(--fontCute);
   outline: none;
   padding: 0;
+}
+
+@media (min-width: 1700px) {
+  .temperature {
+    font-size: clamp(8rem, 8vw, 11rem);
+  }
 }

@@ -71,8 +71,6 @@
 
 @media (min-width: 1150px) {
   :root {
-    --cardPadding: 2rem 3rem;
-
     --space-xxs: 1rem;
     --space-xs: 2rem;
     --space-s: 3rem;
@@ -85,6 +83,7 @@
 @media (min-width: 1500px) {
   :root {
     --bodyLarge: 1.125rem;
+    --cardPadding: 2rem 3rem;
 
     --space-xs: 2.5rem;
     --space-s: 6rem;

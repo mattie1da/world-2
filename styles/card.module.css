@@ -34,7 +34,7 @@
   text-align: center;
 }
 
-@media (min-width: 1150px) {  
+@media (min-width: 1600px) {  
   .heading {
     margin-bottom: 2rem;
   }

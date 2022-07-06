@@ -148,7 +148,6 @@ export const ShowcaseWidgetPair = ({ villagersData, featuredBlog }) => {
               />
             </div>
           }
-          // only show the button if we manage to fetch from the villagers api in the first place
           button={
             villagersData.max && (
               <ErrorButton
@@ -158,14 +157,14 @@ export const ShowcaseWidgetPair = ({ villagersData, featuredBlog }) => {
             )
           }
           footer={
-            <p>
+            <p className={utilStyles.fontCute}>
               💭{' '}
               {loading ? (
                 'Loading...'
               ) : error ? (
                 '---'
               ) : (
-                <em>"{villagerToShow.saying}"</em>
+                `"${villagerToShow.saying}"`
               )}
             </p>
           }

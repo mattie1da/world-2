@@ -62,6 +62,8 @@ export const Hero = ({
             alt={image.alt}
             layout="fill"
             objectFit="cover"
+            quality="100"
+            priority
           />
           <span className={styles.imageWash} />
         </>

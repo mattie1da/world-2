@@ -23,6 +23,7 @@ export const Avatar = ({ author, size }: AvatarInterface) => {
         objectFit="cover"
         alt={`Headshot of ${author.name}`}
         title={author.name}
+        priority
       />
     </div>
   );

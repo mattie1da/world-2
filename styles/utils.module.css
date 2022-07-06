@@ -1,52 +1,81 @@
-.heading2Xl {
-  font-size: 2.5rem;
-  line-height: 1.2;
-  font-weight: 800;
-  letter-spacing: -0.05rem;
-  margin: 1rem 0;
+.visuallyHidden {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
 }
 
-.headingXl {
-  font-size: 2rem;
-  line-height: 1.3;
-  font-weight: 800;
-  letter-spacing: -0.05rem;
-  margin: 1rem 0;
+.accent {
+  color: hsl(var(--theme), var(--palette-saturation), 80%);
 }
 
-.headingLg {
-  font-size: 1.5rem;
-  line-height: 1.4;
-  margin: 1rem 0;
+.fontCute {
+  font-family: var(--fontCute);
 }
 
-.headingMd {
-  font-size: 1.2rem;
-  line-height: 1.5;
+.textSmoke {
+  color: rgb(var(--secondary));
 }
 
-.borderCircle {
-  border-radius: 9999px;
+.textTheme {
+  color: hsl(var(--theme), var(--palette-saturation), var(--palette-lightness));
 }
 
-.colorInherit {
-  color: inherit;
+.grid {
+  display: grid;
+  grid-gap: var(--space-l);
+  grid-auto-columns: minmax(0, 1fr);
+  margin: 0 auto var(--space-s) auto;
+  max-width: 30rem;
 }
 
-.padding1px {
-  padding-top: 1px;
+.gridAlignCenter {
+  align-items: center;
 }
 
-.list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+@media (min-width: 850px) {
+  .grid {
+    grid-column-gap: var(--space-s);
+    grid-row-gap: var(--space-m);
+    grid-template-columns: 1fr 1fr;
+    max-width: none;
+  }
 }
 
-.listItem {
-  margin: 0 0 1.25rem;
+@media (min-width: 1150px) {
+  .grid {
+    grid-gap: var(--space-s);
+  }
 }
 
-.lightText {
-  color: #666;
+
+.gridThin .articleBody {
+  margin-left: 0;
+}
+
+.active::after {
+  background-color: hsl(var(--theme), var(--palette-saturation), var(--palette-lightness));
+  border-radius: 0.1rem;
+  content: '';
+  left: 50%;
+  height: 0.15rem;
+  position: absolute;
+  transform: translateX(-50%) rotate(-1deg);
+  top: calc(100% + 0.75rem);
+  width: 1rem;
+}
+
+.bodyLarge {
+  font-size: var(--bodyLarge);
+}
+
+.articleBody {
+  line-height: 1.8;
+  max-width: var(--articleBodyMaxWidth);
+}
+
+.articleBodyLarge {
+  font-size: var(--bodyLarge);
 }

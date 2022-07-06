@@ -1,27 +1,191 @@
+:root {
+  /* colours */
+  --palette-saturation: 100%;
+  --palette-lightness: 75%;
+  --palette-darken: calc(var(--palette-lightness) - 70%);
+
+  --red: 0;
+  --yellow: 60;
+  --green: 139;
+  --blue: 240;
+  --purple: 270;
+  --pink: 300;
+
+  --white: 255, 255, 255;
+  --smoke: 89, 89, 89;
+  --black: 17, 17, 17;
+
+  --primary: var(--black);
+  --secondary: var(--smoke);
+  --tertiary: var(--white);
+
+  --theme: var(--green);
+  --pageBackgroundColor: var(--tertiary);
+  --navBackgroundColor: var(--tertiary);
+
+  --error: var(--red);
+  --success: var(--green);
+  --vintage: 255, 255, 235;
+
+  /* layout */
+  --containerMaxWidth: 118rem;
+  --articleBodyMaxWidth: 32.5rem;
+  
+  --space-xs: 0.5rem;
+  --space-s: 1.5rem;
+  --space-m: 2.5rem;
+  --space-l: 6rem;
+  --space-xl: 12rem;
+  --space-xxl: 22rem;
+
+  /* elements */
+  --borderMarker: 0.1ch;
+  --cardBorderRadius: 1.25rem;
+  --cardPadding: 1.5rem 2rem;
+  
+  /* typography */
+  --baseFontColor: var(--primary);
+
+  --bodyLarge: 1rem;
+  --heading1: clamp(2.2rem, 5vw, 6rem);
+  --heading2: clamp(2rem, 3.4vw, 4.5rem);
+  --heading3: clamp(1.3rem, 2.5vw, 1.6rem);
+  --heading4: clamp(1.1rem, 1.8vw, 1.2rem);
+  
+  --fontPoppins: 'Poppins', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  --fontCute: 'Gaegu', cursive;
+
+}
+
+@media (min-width: 850px) {
+  :root {
+    --cardBorderRadius: 1.5rem;
+
+    --space-xs: 1.5rem;
+    --space-s: 2rem;
+    --space-m: 4rem;
+    --space-l: 15rem;
+    --space-xl: 18rem;
+  }
+}
+
+@media (min-width: 1150px) {
+  :root {
+    --cardPadding: 2rem 3rem;
+
+    --space-xxs: 1rem;
+    --space-xs: 2rem;
+    --space-s: 3rem;
+    --space-m: 6rem;
+    --space-l: 16rem;
+    --space-xl: 24rem;
+  }
+}
+
+@media (min-width: 1500px) {
+  :root {
+    --bodyLarge: 1.125rem;
+
+    --space-xs: 2.5rem;
+    --space-s: 6rem;
+    --space-m: 12rem;
+    --space-l: 18rem;
+    --space-xl: 26rem;
+  }
+}
+
 html,
 body {
+  background-color: rgb(var(--pageBackgroundColor));
+  color: var(--baseFontColor);
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  line-height: 1.6;
-  font-size: 18px;
+  font-family: var(--fontPoppins);
+  line-height: 1.5;
+  font-size: 16px;
+  
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+mark {
+  color: white;
+  background-color: hsl(var(--theme), var(--palette-saturation), var(--palette-darken));
 }
 
 * {
   box-sizing: border-box;
+  position: relative;
+}
+
+p {
+  max-width: var(--articleBodyMaxWidth);
 }
 
 a {
-  color: #0070f3;
-  text-decoration: none;
+  font-weight: bold;
+  color: var(--primary);
 }
 
 a:hover {
-  text-decoration: underline;
+  color: hsl(var(--theme), var(--palette-saturation), var(--palette-lightness));
+}
+
+a:focus-visible {
+  outline: 5px solid hsl(var(--theme), var(--palette-saturation), var(--palette-lightness));
 }
 
 img {
   max-width: 100%;
   display: block;
+}
+
+figure {
+  margin: 0;
+}
+
+blockquote {
+  margin: 0;
+}
+
+
+/* split into headings file? */
+h1 {
+  font-size: var(--heading1);
+  line-height: 1.1;
+  margin-top: 0;
+}
+
+h2, h3, h4 { 
+  line-height: 1.2;
+  margin: 0;
+}
+
+h2 {
+  font-size: var(--heading2);
+  margin-bottom: var(--space-xs);
+}
+
+h3 {
+  font-size: var(--heading3);
+  line-height: 1.3;
+}
+
+h4 {
+  font-size: var(--heading4);
+}
+
+code {
+  background-color: hsl(var(--theme), var(--palette-saturation), var(--palette-darken));
+  color: rgb(var(--tertiary));
+  border-radius: 0.2rem;
+  font-size: 0.9rem;
+  padding: 0.25rem 0.75rem;
+  line-height: 1.5;
+  overflow-x: auto;
+}
+
+pre code {
+  display: block;
+  padding: 1rem 2rem;
 }

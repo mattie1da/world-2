@@ -28,7 +28,6 @@ export const BlogItem = ({
           layout="fill"
           objectFit="cover"
           alt={image.alt}
-          priority
         />
       </div>
       <div className={styles.body}>

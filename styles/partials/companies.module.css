@@ -1,0 +1,14 @@
+.wrapper {
+  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+  margin-top: var(--space-l);
+  place-items: center;
+}
+  
+@media (min-width: 850px) {
+  .wrapper {
+    margin-top: var(--space-s);
+  }
+}

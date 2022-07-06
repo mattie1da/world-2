@@ -1,0 +1,25 @@
+.wrapper {
+  row-gap: var(--space-l);
+  margin-left: 0;
+}
+
+
+@media (max-width: 849px) {
+  .content:nth-child(4) {
+    grid-row: 3;
+  }
+}
+
+@media (min-width: 850px) {
+  .wrapper {
+    row-gap: var(--space-s);
+  }
+
+  .wrapper > :nth-child(2) {
+    transform: rotate(1deg);
+  }
+  
+  .wrapper > :nth-child(3) {
+    transform: rotate(-1deg);
+  }
+}

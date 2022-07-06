@@ -1,0 +1,1 @@
+export const isNightTime = () => new Date().getHours({timeZone: 'Europe/London'}) >= 21 || new Date().getHours({timeZone: 'Europe/London'}) <= 6

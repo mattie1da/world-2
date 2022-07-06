@@ -22,11 +22,7 @@ export const BlogItem = ({
       </aside>
       {/* TODO: next image */}
       <div className={styles.thumbnailWrapper}>
-        <img
-          className={styles.thumbnail}
-          src={image.url}
-          alt={image.alt}
-        />
+        <img className={styles.thumbnail} src={image.url} alt={image.alt} />
       </div>
       <div className={styles.body}>
         <header className={styles.header}>

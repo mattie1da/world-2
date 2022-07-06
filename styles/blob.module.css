@@ -1,5 +1,5 @@
 .blob {
-  animation: lava 45s ease-in-out infinite alternate;
+  animation: lava 30s ease-in-out infinite alternate;
   position: absolute;
   max-width: 22rem;
   filter: blur(0.3rem);

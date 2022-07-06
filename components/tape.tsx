@@ -5,8 +5,8 @@ import { TapeInterface } from '../types';
 
 export const Tape = forwardRef(({ position, size }: TapeInterface, ref) => {
   return (
-    // @ts-ignore
     <aside
+      // @ts-ignore
       ref={ref}
       className={classnames(styles.tape, {
         [styles.left]: position === 'left',

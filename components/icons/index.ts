@@ -1,0 +1,1 @@
+export { IconStrava } from './IconStrava';

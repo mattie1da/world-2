@@ -57,7 +57,7 @@ export const Palette = () => {
     <div className={styles.wrapper} ref={colorsRef}>
       <div>
         <p className={styles.label}>
-          Pick your accent colour<span>; make yourself at home..</span>
+          Pick your accent colour <span>- make yourself at home..</span>
         </p>
 
         <div className={styles.scroller}>
@@ -120,7 +120,7 @@ export const Palette = () => {
       </div>
       <div className={styles.modesWrapper}>
         <p className={styles.label}>
-          Choose your lighting<span>; protect those eyes!</span>
+          Choose your lighting <span> - what's the vibe?</span>
         </p>
 
         <Mode updateThemePreferences={updateThemePreferences} state={state} />

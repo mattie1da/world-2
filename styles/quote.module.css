@@ -18,6 +18,8 @@
 
 .quote {
   color: var(--baseFontColor);
+  font-family: var(--fontCute);
+  margin-bottom: var(--space-xxs);
 }
 
 .author {

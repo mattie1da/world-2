@@ -1,0 +1,20 @@
+.wrapper {
+  margin: 0 auto;
+  max-width: var(--containerMaxWidth);
+  padding-left: var(--space-m);
+  padding-right: var(--space-m);
+}
+
+.dark {
+  background-color: rgb(var(--primary));
+  color: rgb(var(--tertiary));
+  padding-top: var(--space-s);
+  padding-bottom: var(--space-s);
+
+  -webkit-clip-path: polygon(0 5%, 100% 0, 100% 100%, 0% 100%);
+  clip-path: polygon(0 5%, 100% 0, 100% 100%, 0% 100%);
+}
+
+.thin {
+  max-width: calc(var(--containerMaxWidth) - 20rem);
+}

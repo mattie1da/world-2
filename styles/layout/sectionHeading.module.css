@@ -1,0 +1,20 @@
+.wrapper {
+  margin-bottom: var(--space-m);
+}
+
+.title {
+  max-width: 13em;
+}
+
+.preTitle {
+  color: rgb(var(--smoke));
+  font-size: var(--heading4);
+  font-family: var(--fontCute);
+  margin-bottom: 0;
+}
+
+@media (min-width: 850px) {
+  .wrapper {
+    margin-bottom: var(--space-s);
+  }
+}

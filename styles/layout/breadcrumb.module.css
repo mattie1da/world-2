@@ -1,0 +1,19 @@
+@media (max-width: 849px) {
+  .current {
+    display: none;
+  }
+
+  .wrapper {
+    margin-bottom: var(--space-s);
+  }
+}
+
+.arrow {
+  margin: 0 0.4rem;
+}
+
+@media (min-width: 850px) {
+  .wrapper {
+    margin-bottom: var(--space-xs);
+  }
+}

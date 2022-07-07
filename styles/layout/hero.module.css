@@ -25,6 +25,7 @@
 .image {
   background-color: hsl(var(--theme), var(--palette-saturation), var(--palette-darken));
   object-fit: cover;
+  transition: 0.2s ease-in-out;
 }
 
 .lead {

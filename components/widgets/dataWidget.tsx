@@ -25,7 +25,9 @@ export const DataWidget = ({
     <>
       <header className={styles.header}>
         <h2 className={styles.title}>{title}</h2>
-        <p className={classnames(utilStyles.fontCute, styles.description)}>{description}</p>
+        <p className={classnames(utilStyles.fontCute, styles.description)}>
+          {description}
+        </p>
       </header>
       <div className={styles.image}>{image}</div>
       {button && <div className={styles.button}>{button}</div>}

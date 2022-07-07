@@ -42,7 +42,10 @@ export const WeatherWidget = () => {
       <>
         {title}
         <span className={utilStyles.accent}>..</span>
-        &nbsp;<span className={classnames(utilStyles.fontCute, styles.subTitle)}>{subtitle}</span>
+        &nbsp;
+        <span className={classnames(utilStyles.fontCute, styles.subTitle)}>
+          {subtitle}
+        </span>
       </>
     );
   };

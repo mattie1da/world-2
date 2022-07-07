@@ -39,7 +39,9 @@ export const Status = ({ status }: StatusInterface) => {
               ref={(el) => (online.current[2] = el)}
             ></span>
           </div>
-          <p className={classnames(utilStyles.fontCute, styles.message)}>i'm online! now playing:</p>
+          <p className={classnames(utilStyles.fontCute, styles.message)}>
+            i'm online! now playing:
+          </p>
         </>
       ) : (
         <>

@@ -77,11 +77,15 @@ export const DateAndTime = () => {
       </header>
       <footer className={styles.footer}>
         <h2 className={styles.date}>{date}</h2>
-        <span className={classnames(utilStyles.fontCute, styles.cute)}>{cuteWording()}</span>
+        <span className={classnames(utilStyles.fontCute, styles.cute)}>
+          {cuteWording()}
+        </span>
         <time className={styles.hour24}>
           <span>
             {time.hour24.hours}
-            <span className={classnames(utilStyles.accent, styles.colon)}>:</span>
+            <span className={classnames(utilStyles.accent, styles.colon)}>
+              :
+            </span>
           </span>
           <span className={utilStyles.textSmoke}>{time.hour24.minutes}</span>
         </time>

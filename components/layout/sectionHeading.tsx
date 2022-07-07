@@ -13,7 +13,9 @@ export const SectionHeading = ({
 }: SectionHeadingInterface) => {
   return (
     <div className={styles.wrapper}>
-      <p className={classnames(utilStyles.fontCute, styles.preTitle)}>{preTitle}</p>
+      <p className={classnames(utilStyles.fontCute, styles.preTitle)}>
+        {preTitle}
+      </p>
       <h2 className={styles.title}>{title}</h2>
     </div>
   );

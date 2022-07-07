@@ -1,9 +1,13 @@
 import axios from "axios";
+import { getPlaiceholder } from "plaiceholder";
 import querystring from 'querystring'
 
 const spotifyDataResolver = (data, playing) => {
   return {
-    album: data.album.images[0].url,
+    album: {
+      plaiceholder: data.album.images[0].plaiceholder,
+      url: data.album.images[0].url
+    },
     artists: data.artists.map(artist => artist.name),
     is_playing: playing,
     name: data.name,
@@ -35,6 +39,9 @@ export default async (req, res) => {
       }
     });
 
+    const { base64 } = await getPlaiceholder(response.data.items[0].track.album.images[0].url)
+    response.data.items[0].track.album.images[0].plaiceholder = base64
+
     return spotifyDataResolver(response.data.items[0].track);
   }
 
@@ -44,8 +51,12 @@ export default async (req, res) => {
         "Authorization": `Bearer ${await returnFreshAccessToken()}`
       }
     })
+
     
     if (response.data.is_playing) {
+      const { base64 } = await getPlaiceholder(response.data.item.album.images[0].url)
+      response.data.item.album.images[0].plaiceholder = base64
+
       return spotifyDataResolver(response.data.item, true);
     } else {
       return getRecentlyPlayedTrack();

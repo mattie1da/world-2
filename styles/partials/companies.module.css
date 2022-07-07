@@ -6,6 +6,10 @@
   margin-top: var(--space-l);
   place-items: center;
 }
+
+.wrapper svg {
+  max-width: 100%;
+}
   
 @media (min-width: 850px) {
   .wrapper {

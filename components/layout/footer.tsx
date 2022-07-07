@@ -10,7 +10,7 @@ export const Footer = () => {
       <footer className={styles.wrapper}>
         <div className={styles.signature}>
           <p>Design & build by me 💕</p>
-          <GlobalLink text="Read the process" url="/diary/6" />
+          <GlobalLink text="Read the process" url="/diary/5" />
         </div>
         <div className={styles.signature}>
           <p>Send me a message&nbsp;&nbsp;🐝</p>

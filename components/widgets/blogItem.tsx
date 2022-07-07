@@ -25,6 +25,8 @@ export const BlogItem = ({
         <Image
           className={styles.thumbnail}
           src={image.url}
+          placeholder="blur"
+          blurDataURL={image.plaiceholder}
           layout="fill"
           objectFit="cover"
           alt={image.alt}

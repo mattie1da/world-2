@@ -25,6 +25,7 @@ interface HeroInterface {
   image?: {
     alt: string;
     url: string;
+    plaiceholder: string,
   };
   withMeta?: {
     authors?: Array<AuthorInterface>;
@@ -60,6 +61,8 @@ export const Hero = ({
             className={styles.image}
             src={image.url}
             alt={image.alt}
+            placeholder="blur"
+            blurDataURL={image.plaiceholder}
             layout="fill"
             objectFit="cover"
             quality="100"

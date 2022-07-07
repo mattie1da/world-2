@@ -6,7 +6,8 @@ export interface BlogItemInterface {
   id: Number,
   image: {
     alt: string,
-    url: string
+    url: string,
+    plaiceholder: string,
   },
   tag: string,
   title: string,

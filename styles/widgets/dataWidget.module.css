@@ -85,7 +85,6 @@
 
 @media (min-width: 850px) {
   .description {
-    max-width: 75%;
     margin-bottom: 0.5rem;
   }
   
@@ -113,8 +112,8 @@
 
   .image svg {
     display: block;
-    width: 6rem;
-    height: 6rem;
+    width: 4.5rem;
+    height: 4.5rem;
   }
 }
 

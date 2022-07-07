@@ -20,6 +20,7 @@ export const SpotifyWidget = () => {
         setError(false);
       });
     } catch (err) {
+      console.log(err);
       setError(true);
     }
 

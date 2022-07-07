@@ -23,6 +23,7 @@
 }
 
 .image {
+  background-color: hsl(var(--theme), var(--palette-saturation), var(--palette-lightness));
   object-fit: cover;
 }
 

@@ -13,7 +13,11 @@ import { Breadcrumb } from '../layout';
 import { Avatars } from '../partials';
 
 // types
-import { AuthorInterface, BreadcrumbInterface } from '../../types';
+import {
+  AuthorInterface,
+  BreadcrumbInterface,
+  ImageInterface
+} from '../../types';
 import { useRouter } from 'next/router';
 import { Container } from './container';
 
@@ -22,11 +26,7 @@ interface HeroInterface {
   home?: boolean;
   lead?: string;
   title: string;
-  image?: {
-    alt: string;
-    url: string;
-    plaiceholder: string,
-  };
+  image?: ImageInterface;
   withMeta?: {
     authors?: Array<AuthorInterface>;
     date?: string;

@@ -10,9 +10,7 @@ interface QuoteInterface {
 export const Quote = ({ text, author }: QuoteInterface) => {
   return (
     <figure className={styles.wrapper}>
-      <blockquote className={styles.quote}>
-        {text}"
-      </blockquote>
+      <blockquote className={styles.quote}>{text}"</blockquote>
       <figcaption className={styles.author}>{author}</figcaption>
     </figure>
   );

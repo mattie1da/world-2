@@ -159,13 +159,11 @@ export const ShowcaseWidgetPair = ({ villagersData, featuredBlog }) => {
           footer={
             <p className={utilStyles.fontCute}>
               💭{' '}
-              {loading ? (
-                'Loading...'
-              ) : error ? (
-                '---'
-              ) : (
-                `"${villagerToShow.saying}"`
-              )}
+              {loading
+                ? 'Loading...'
+                : error
+                ? '---'
+                : `"${villagerToShow.saying}"`}
             </p>
           }
         />

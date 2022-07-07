@@ -15,7 +15,7 @@ import { Companies, ShowcaseWidgetPair } from '../components/partials'
 
 // types
 
-export default function Home({ allBlogsData, globalSettingsData, villagersData }) {
+export default function Home({ featuredBlogsData, globalSettingsData, villagersData }) {
   return (
     <Layout home>
       <Head>
@@ -38,7 +38,7 @@ export default function Home({ allBlogsData, globalSettingsData, villagersData }
       />
       <Palette />
       <BlobSeven />
-      <Widgets featuredArticle={allBlogsData.find(article => article.id === 6)} />
+      <Widgets featuredArticle={featuredBlogsData[0]} />
       <BlobFive />
       <BlobSix />
       <Container thin>
@@ -48,7 +48,7 @@ export default function Home({ allBlogsData, globalSettingsData, villagersData }
             title: <>I design, <Highlight text="build" /> <span className={utilStyles.textSmoke}>and maintain</span> websites and apps 📱🖥⚡️</>
           }}
           content={
-            <ShowcaseWidgetPair villagersData={villagersData} featuredBlog={allBlogsData.find(article => article.id === 5)} />
+            <ShowcaseWidgetPair villagersData={villagersData} featuredBlog={featuredBlogsData[1]} />
           }
         />
       </Container>
@@ -169,13 +169,13 @@ export default function Home({ allBlogsData, globalSettingsData, villagersData }
 }
 
 export async function getStaticProps() {
-  const allBlogsData = await getBlogs();
+  const featuredBlogsData = await getBlogs([6, 5]);
   const globalSettingsData = await getGlobalSettings();
   const villagersData = await getVillagers();
 
   return {
     props: {
-      allBlogsData,
+      featuredBlogsData,
       globalSettingsData,
       villagersData
     }

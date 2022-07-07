@@ -194,7 +194,7 @@ blockquote {
 h1 {
   font-size: var(--heading1);
   line-height: 1.1;
-  letter-spacing: -0.05ch;
+  letter-spacing: -0.04ch;
   margin-top: 0;
 }
 

@@ -5,7 +5,7 @@ import querystring from 'querystring'
 const spotifyDataResolver = (data, playing) => {
   return {
     album: {
-      plaiceholder: data.album.images[0].plaiceholder,
+      // plaiceholder: data.album.images[0].plaiceholder,
       url: data.album.images[0].url
     },
     artists: data.artists.map(artist => artist.name),
@@ -39,8 +39,8 @@ export default async (req, res) => {
       }
     });
 
-    const { base64 } = await getPlaiceholder(response.data.items[0].track.album.images[0].url)
-    response.data.items[0].track.album.images[0] = {...response.data.items[0].track.album.images[0], plaiceholder: base64}
+    // const { base64 } = await getPlaiceholder(response.data.items[0].track.album.images[0].url)
+    // response.data.items[0].track.album.images[0] = {...response.data.items[0].track.album.images[0], plaiceholder: base64}
 
     return spotifyDataResolver(response.data.items[0].track);
   }
@@ -54,8 +54,8 @@ export default async (req, res) => {
 
     
     if (response.data.is_playing) {
-      const { base64 } = await getPlaiceholder(response.data.item.album.images[0].url)
-      response.data.item.album.images[0] = {...response.data.item.album.images[0], plaiceholder: base64}
+      // const { base64 } = await getPlaiceholder(response.data.item.album.images[0].url)
+      // response.data.item.album.images[0] = {...response.data.item.album.images[0], plaiceholder: base64}
 
       return spotifyDataResolver(response.data.item, true);
     } else {

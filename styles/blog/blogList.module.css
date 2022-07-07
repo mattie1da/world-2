@@ -2,6 +2,7 @@
   display: grid;
   grid-gap: var(--space-m);
   padding-left: 0;
+  padding-bottom: var(--space-xs);
   list-style: none;
 }
 

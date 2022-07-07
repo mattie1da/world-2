@@ -27,8 +27,6 @@
 
 .farenheit {
   color: rgb(var(--secondary));
-  font-family: var(--fontCute);
-  font-size: 1rem;
   font-weight: normal;
   position: absolute;
   left: 0;

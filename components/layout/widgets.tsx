@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import axios from 'axios';
 
 // styles
+import classnames from 'classnames';
 import styles from '../../styles/layout/widgets.module.css';
 import utilStyles from '../../styles/utils.module.css';
 
@@ -57,19 +58,19 @@ export const Widgets = ({ featuredArticle }: WidgetsInterface) => {
           <Card tape={{ position: 'left', size: 'large' }}>
             <SpotifyWidget />
           </Card>
-          <p className={styles.label}>spotify web api</p>
+          <p className={classnames(utilStyles.fontCute, styles.label)}>spotify web api</p>
         </div>
         <div ref={(el) => (widgets.current[1] = el)}>
           <Card tape={{ position: 'left' }} type="date">
             <DateAndTime />
           </Card>
-          <p className={styles.label}>my local date and time 🇬🇧</p>
+          <p className={classnames(utilStyles.fontCute, styles.label)}>my local date and time 🇬🇧</p>
         </div>
         <div className={styles.weather} ref={(el) => (widgets.current[2] = el)}>
           <Card tape={{ position: 'right' }} type="weather">
             <WeatherWidget />
           </Card>
-          <p className={styles.label}>weather api</p>
+          <p className={classnames(utilStyles.fontCute, styles.label)}>weather api</p>
         </div>
         <div ref={(el) => (widgets.current[4] = el)} className={styles.blog}>
           <Card tape={{ position: 'corner' }} type="blog">
@@ -84,7 +85,7 @@ export const Widgets = ({ featuredArticle }: WidgetsInterface) => {
               url={`/diary/${featuredArticle.id}`}
             />
           </Card>
-          <p className={styles.label}>backend, strapi cms</p>
+          <p className={classnames(utilStyles.fontCute, styles.label)}>backend, strapi cms</p>
         </div>
         <div className={styles.strava} ref={(el) => (widgets.current[3] = el)}>
           <Card tape={{ position: 'left' }}>
@@ -205,7 +206,7 @@ export const Widgets = ({ featuredArticle }: WidgetsInterface) => {
               }
             />
           </Card>
-          <p className={styles.label}>strava api</p>
+          <p className={classnames(utilStyles.fontCute, styles.label)}>strava api</p>
         </div>
         <>
           <span></span>

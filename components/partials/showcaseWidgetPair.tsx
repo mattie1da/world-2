@@ -178,16 +178,9 @@ export const ShowcaseWidgetPair = ({ villagersData, featuredBlog }) => {
           , <strong>accessibility</strong> and <strong>consistency</strong>.
           <br />
         </p>
-        <figure>
-          <blockquote>
-            <em>"One day, son, all this legacy code will be yours."</em>
-          </blockquote>
-          <figcaption
-            className={`${utilStyles.fontCute} ${utilStyles.textSmoke}`}
-          >
-            - a very clever coding lion x
-          </figcaption>
-        </figure>
+        <p className={classnames(utilStyles.fontCute, utilStyles.textSmoke)}>
+          "One day, son, all this legacy code will be yours."
+        </p>
       </div>
     </div>
   );

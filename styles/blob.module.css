@@ -11,11 +11,11 @@
 }
 
 .blob:nth-of-type(odd) {
-  left: calc(var(--space-l) * -2.75);
+  left: calc(var(--space-l) * -2.8);
 }
 
 .blob:nth-of-type(even) {
-  right: calc(var(--space-l) * -2.75);
+  right: calc(var(--space-l) * -2.8);
 }
 
 @keyframes lava {

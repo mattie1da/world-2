@@ -1,6 +1,8 @@
 import Link from 'next/link';
 import Image from 'next/image';
 
+import classnames from 'classnames';
+import utilStyles from '../../styles/utils.module.css';
 import styles from '../../styles/widgets/blogItem.module.css';
 
 import { Avatar, DateParser, GlobalLink, Tag } from '../';
@@ -39,7 +41,7 @@ export const BlogItem = ({
               <Avatar key={index} author={author} />
             ))}
           </div>
-          <span className={styles.date}>
+          <span className={classnames(utilStyles.fontCute, styles.date)}>
             <DateParser dateString={publishedAt} />
           </span>
         </header>

@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { isNightTime } from '../../helpers/isNightTime';
 
+import classnames from 'classnames';
 import styles from '../../styles/widgets/weather.module.css';
 import utilStyles from '../../styles/utils.module.css';
 import { ErrorButton } from '../';
@@ -41,7 +42,7 @@ export const WeatherWidget = () => {
       <>
         {title}
         <span className={utilStyles.accent}>..</span>
-        &nbsp;<span className={styles.subTitle}>{subtitle}</span>
+        &nbsp;<span className={classnames(utilStyles.fontCute, styles.subTitle)}>{subtitle}</span>
       </>
     );
   };
@@ -73,7 +74,7 @@ export const WeatherWidget = () => {
             ? `${Math.round(weatherData.celcius)}`
             : '--'}
           <span className={utilStyles.accent}>&deg;</span>
-          <span className={styles.farenheit}>
+          <span className={classnames(utilStyles.fontCute, styles.farenheit)}>
             {loading
               ? 'hold tight weather man'
               : weatherData

@@ -35,7 +35,6 @@
 @media (min-width: 850px) {
   .large {
     border-width: 3px;
-    font-size: 1.4rem;
     height: 3.5rem;
     width: 3.5rem;
   }

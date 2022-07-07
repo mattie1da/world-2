@@ -19,11 +19,14 @@
 .quote {
   color: var(--baseFontColor);
   font-family: var(--fontCute);
+  line-height: 1.5;
+  font-size: 1.2rem;
   margin-bottom: var(--space-xxs);
 }
 
 .author {
   color: rgb(var(--secondary));
+  font-size: 1.1rem;
   font-family: var(--fontCute);
 }
 

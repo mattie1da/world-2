@@ -79,7 +79,6 @@
   .compliment {
     display: block;
     color: rgb(var(--smoke));
-    font-family: var(--fontCute);
     margin: 0;
     padding-left: var(--space-m);
     padding-top: var(--space-xs);
@@ -102,7 +101,12 @@
     max-width: var(--containerMaxWidth)
   }
 
+  .label {
+    font-size: 1.1rem;
+  }
+
   .compliment {
     padding-top: 0;
+    font-size: 1.1rem;
   }
 }

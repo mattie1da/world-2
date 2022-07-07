@@ -13,6 +13,7 @@
 
 .fontCute {
   font-family: var(--fontCute);
+  font-size: 1.1rem;
 }
 
 .textSmoke {
@@ -47,6 +48,16 @@
 @media (min-width: 1150px) {
   .grid {
     grid-gap: var(--space-s);
+  }
+
+  .fontCute {
+    font-size: var(--heading4);
+  }
+}
+
+@media (min-width: 1700px) {
+  .fontCute {
+    font-size: 1.3rem;
   }
 }
 

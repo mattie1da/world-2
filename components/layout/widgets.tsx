@@ -63,7 +63,7 @@ export const Widgets = ({ featuredArticle }: WidgetsInterface) => {
           <Card tape={{ position: 'left' }} type="date">
             <DateAndTime />
           </Card>
-          <p className={styles.label}>my local date and time</p>
+          <p className={styles.label}>my local date and time 🇬🇧</p>
         </div>
         <div className={styles.weather} ref={(el) => (widgets.current[2] = el)}>
           <Card tape={{ position: 'right' }} type="weather">

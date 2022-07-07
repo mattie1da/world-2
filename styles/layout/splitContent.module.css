@@ -19,6 +19,7 @@
 
 .media {
   aspect-ratio: 1005 / 500;
+  background-color: hsl(var(--theme), var(--palette-saturation), var(--palette-lightness));
   border-radius: 0.75rem;
   box-shadow: 0rem 0.5rem 1rem rgb(var(--primary));
   overflow: hidden;

@@ -20,7 +20,6 @@ export const SpotifyWidget = () => {
         setError(false);
       });
     } catch (err) {
-      console.log(err);
       setError(true);
     }
 
@@ -52,9 +51,7 @@ export const SpotifyWidget = () => {
         {!loading && spotifyData && (
           <Image
             className={styles.thumbnail}
-            src={spotifyData.album.url}
-            placeholder="blur"
-            blurDataURL={spotifyData.album.plaiceholder}
+            src={spotifyData.album}
             alt={`${spotifyData.name} album cover`}
             layout="fill"
             objectFit="cover"

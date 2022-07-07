@@ -1,13 +1,9 @@
 import axios from "axios";
-import { getPlaiceholder } from "plaiceholder";
 import querystring from 'querystring'
 
 const spotifyDataResolver = (data, playing) => {
   return {
-    album: {
-      plaiceholder: data.album.images[0].plaiceholder,
-      url: data.album.images[0].url
-    },
+    album: data.album.images[0].url,
     artists: data.artists.map(artist => artist.name),
     is_playing: playing,
     name: data.name,
@@ -27,61 +23,34 @@ export default async (req, res) => {
       "Content-Type": 'application/x-www-form-urlencoded',
     }
 
-    try {
-      const response = await axios.post(process.env.SPOTIFY_API_ENDPOINT_AUTH, querystring.stringify(data), { headers: headers });
-      
-      return response.data.access_token;
-    } catch(err) {
-      console.log('access token err', err);
-      res.status(500).json({error: err})
-    }
+    const response = await axios.post(process.env.SPOTIFY_API_ENDPOINT_AUTH, querystring.stringify(data), { headers: headers });
+  
+    return response.data.access_token;
   }
 
   const getRecentlyPlayedTrack = async () => {
-    try {
-      let response = await axios.get(process.env.SPOTIFY_API_ENDPOINT_ACCOUNT + 'recently-played', {
-        headers: {
-          "Authorization": `Bearer ${await returnFreshAccessToken()}`
-        }
-      });
-  
-      const { base64 } = await getPlaiceholder(response.data.items[0].track.album.images[0].url)
-      response.data.items[0].track.album.images[0] = {...response.data.items[0].track.album.images[0], plaiceholder: base64}
-  
-      return spotifyDataResolver(response.data.items[0].track);
-    } catch(err) {
-      console.log('recently played error', err);
-      return err;
-    }
-  }
-
-  const getSpotifyData = async () => {
-    try {
-      let response = await axios.get(process.env.SPOTIFY_API_ENDPOINT_ACCOUNT + 'currently-playing', {
-        headers: {
-          "Authorization": `Bearer ${await returnFreshAccessToken()}`
-        }
-      })
-      
-      if (response.data.is_playing) {
-        const { base64 } = await getPlaiceholder(response.data.item.album.images[0].url)
-        response.data.item.album.images[0] = {...response.data.item.album.images[0], plaiceholder: base64}
-  
-        return spotifyDataResolver(response.data.item, true);
-      } else {
-        return getRecentlyPlayedTrack();
+    const response = await axios.get(process.env.SPOTIFY_API_ENDPOINT_ACCOUNT + 'recently-played', {
+      headers: {
+        "Authorization": `Bearer ${await returnFreshAccessToken()}`
       }
-    } catch(err) {
-      console.log('get data error', err);
-      return err;
+    });
+
+    return spotifyDataResolver(response.data.items[0].track);
+  }
+
+  const getSpotifyData = async () => {  
+    const response = await axios.get(process.env.SPOTIFY_API_ENDPOINT_ACCOUNT + 'currently-playing', {
+      headers: {
+        "Authorization": `Bearer ${await returnFreshAccessToken()}`
+      }
+    })
+    
+    if (response.data.is_playing) {
+      return spotifyDataResolver(response.data.item, true);
+    } else {
+      return getRecentlyPlayedTrack();
     }
   }
 
-  try {
-    const data = await getSpotifyData();
-
-    res.status(200).json({ data: data })
-  } catch (err) {
-    res.status(500).json({error: err})
-  }
+  res.status(200).json({ data: await getSpotifyData() })
 }

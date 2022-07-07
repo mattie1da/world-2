@@ -1,3 +1,5 @@
+import classnames from 'classnames';
+import utilStyles from '../styles/utils.module.css';
 import styles from '../styles/status.module.css';
 import { useEffect, useRef } from 'react';
 import {
@@ -37,7 +39,7 @@ export const Status = ({ status }: StatusInterface) => {
               ref={(el) => (online.current[2] = el)}
             ></span>
           </div>
-          <p className={styles.message}>i'm online! now playing:</p>
+          <p className={classnames(utilStyles.fontCute, styles.message)}>i'm online! now playing:</p>
         </>
       ) : (
         <>

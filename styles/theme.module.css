@@ -29,7 +29,7 @@
   --palette-darken: 5%;
   --smoke: 155, 155, 155;
   --secondary: var(--smoke);
-  --cardBoxShadow: 0rem 1rem 1rem rgba(var(--secondary), 0.05);
+  --cardBoxShadow: 0rem 1rem 1rem hsla(var(--theme), var(--palette-saturation), var(--palette-lightness), 0.05);
   
   background-color: var(--pageBackgroundColor);
   color: var(--baseFontColor);

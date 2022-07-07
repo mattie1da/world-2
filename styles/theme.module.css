@@ -28,6 +28,7 @@
   --navBackgroundColor: var(--primary);
   --palette-darken: 5%;
   --smoke: 155, 155, 155;
+  --secondary: var(--smoke);
   
   background-color: var(--pageBackgroundColor);
   color: var(--baseFontColor);

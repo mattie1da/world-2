@@ -20,6 +20,7 @@ export const SpotifyWidget = () => {
         setError(false);
       });
     } catch (err) {
+      console.log(err);
       setError(true);
     }
 
@@ -39,7 +40,6 @@ export const SpotifyWidget = () => {
 
   return (
     <>
-      {/* TODO: Thumbnail Next Image */}
       <div
         className={styles.thumbnailWrapper}
         style={{

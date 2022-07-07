@@ -52,8 +52,8 @@ export const SpotifyWidget = () => {
           <Image
             className={styles.thumbnail}
             src={spotifyData.album.url}
-            // placeholder="blur"
-            // blurDataURL={spotifyData.album.plaiceholder}
+            placeholder="blur"
+            blurDataURL={spotifyData.album.plaiceholder}
             alt={`${spotifyData.name} album cover`}
             layout="fill"
             objectFit="cover"

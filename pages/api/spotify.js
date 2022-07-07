@@ -5,7 +5,7 @@ import querystring from 'querystring'
 const spotifyDataResolver = (data, playing) => {
   return {
     album: {
-      // plaiceholder: data.album.images[0].plaiceholder,
+      plaiceholder: data.album.images[0].plaiceholder,
       url: data.album.images[0].url
     },
     artists: data.artists.map(artist => artist.name),
@@ -27,8 +27,12 @@ export default async (req, res) => {
       "Content-Type": 'application/x-www-form-urlencoded',
     }
 
+    console.log('headers', headers);
+
     const response = await axios.post(process.env.SPOTIFY_API_ENDPOINT_AUTH, querystring.stringify(data), { headers: headers });
   
+    console.log('response for token', response);
+    console.log('fresh access token', response.data.access_token);
     return response.data.access_token;
   }
 
@@ -39,8 +43,8 @@ export default async (req, res) => {
       }
     });
 
-    // const { base64 } = await getPlaiceholder(response.data.items[0].track.album.images[0].url)
-    // response.data.items[0].track.album.images[0] = {...response.data.items[0].track.album.images[0], plaiceholder: base64}
+    const { base64 } = await getPlaiceholder(response.data.items[0].track.album.images[0].url)
+    response.data.items[0].track.album.images[0] = {...response.data.items[0].track.album.images[0], plaiceholder: base64}
 
     return spotifyDataResolver(response.data.items[0].track);
   }

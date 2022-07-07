@@ -1,3 +1,4 @@
+import utilStyles from '../styles/utils.module.css';
 import styles from '../styles/mode.module.css';
 import classnames from 'classnames';
 
@@ -19,7 +20,7 @@ export const Mode = ({ updateThemePreferences, state }) => {
   const renderAutoLabel = () => {
     return (
       <label
-        className={classnames(styles.label, {
+        className={classnames(utilStyles.fontCute, styles.label, {
           [styles.active]: state.mode === 'auto'
         })}
         htmlFor="auto"
@@ -46,7 +47,7 @@ export const Mode = ({ updateThemePreferences, state }) => {
   const renderDarkLabel = () => {
     return (
       <label
-        className={classnames(styles.label, {
+        className={classnames(utilStyles.fontCute, styles.label, {
           [styles.active]: state.mode === 'dark'
         })}
         htmlFor="dark"
@@ -73,7 +74,7 @@ export const Mode = ({ updateThemePreferences, state }) => {
   const renderLightLabel = () => {
     return (
       <label
-        className={classnames(styles.label, {
+        className={classnames(utilStyles.fontCute, styles.label, {
           [styles.active]: state.mode === 'light'
         })}
         htmlFor="light"

@@ -13,6 +13,7 @@ import {
   YellowColor
 } from './colors';
 import { paletteReveal } from './animations/paletteReveal';
+import { compliments } from '../lib/compliments';
 
 export const Palette = () => {
   const { state, updateThemePreferences } = useContext(GlobalStateContext);
@@ -21,24 +22,6 @@ export const Palette = () => {
   useEffect(() => {
     paletteReveal(colorsRef.current);
   }, []);
-
-  const compliments = [
-    "all i'm seeing is flames",
-    'i feel the same tbh',
-    'i knew it',
-    'just WOW',
-    'did you get new shoes?',
-    'looks good on you! 💕',
-    'keep up the drip my g 😮‍💨',
-    'only you could pull this off ✨',
-    'really brings out your eyes',
-    "someone's looking good!",
-    'too clean 🛀',
-    'what! come on 🏃🏻',
-    'wow',
-    'oh you and i are going to get on',
-    "you're on fire today 🥵"
-  ];
 
   const punctuations = ['!', '?', '?!', ' -', '..'];
 

@@ -52,16 +52,23 @@
 }
 
 .hour24 {
+  display: flex;
   font-size: 5rem;
+  gap: 1.5rem;
   line-height: 1;
   font-weight: bold;
+}
+
+.colon {
+  position: absolute;
+  bottom: 0.3rem;
+  left: 100%;
 }
 
 .cute {
   color: rgb(var(--secondary));
   display: block;
   line-height: 1;
-  font-family: var(--fontCute);
 }
 
 @media (min-width: 850px) {
@@ -71,5 +78,6 @@
   
   .hour24 {
     font-size: var(--heading1);
+    gap: clamp(1rem, 1.5vw, 1.75rem);
   }
 }

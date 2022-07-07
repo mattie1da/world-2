@@ -30,7 +30,7 @@
 }
 
 .label {
-  font-family: var(--fontCute);
+  color: var(--secondary);
   text-align: center;
   margin: var(--space-s) 0 0 0;
   max-width: none;
@@ -85,6 +85,11 @@
   .grid {
     grid-gap: var(--space-xs);
     grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .label {
+    font-size: 1.1rem;
+    margin-top: var(--space-xxs);
   }
 }
 

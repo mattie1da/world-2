@@ -4,6 +4,9 @@
 }
 
 .description {
+  align-items: baseline;
+  display: flex;
+  flex-wrap: wrap;
   color: rgb(var(--secondary));
   font-family: var(--fontCute);
   line-height: 1.1;
@@ -12,6 +15,7 @@
 
 .description strong {
   color: rgb(var(--tertiary));
+  margin-left: 0.25rem;
   font-size: 1.4rem;
 }
 
@@ -115,6 +119,10 @@
 }
 
 @media (min-width: 1150px) {
+  .data {
+    grid-gap: 1rem 2rem;
+  }
+
   .footer {
     gap: var(--space-xxs);
   }

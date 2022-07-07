@@ -23,13 +23,6 @@
   fill: #FC6100;
 }
 
-@keyframes wiggle {
-  0% { transform: rotate(0) }
-  25% { transform: rotate(2deg) }
-  75% { transform: rotate(-2deg) }
-  100% { transform: rotate(0) }
-}
-
 .data {
   display: grid;
   grid-template-columns: repeat(2, 1fr);

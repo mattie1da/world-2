@@ -23,7 +23,7 @@
 }
 
 .image {
-  background-color: hsl(var(--theme), var(--palette-saturation), var(--palette-lightness));
+  background-color: hsl(var(--theme), var(--palette-saturation), var(--palette-darken));
   object-fit: cover;
 }
 

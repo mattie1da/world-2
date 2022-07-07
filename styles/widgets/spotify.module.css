@@ -1,9 +1,9 @@
 .thumbnail {
-  animation: fadeIn 0.2s ease-in-out;
+  animation: fadeIn 1s ease-in-out;
   border-radius: 0.2rem;
   object-fit: cover;
   height: 100%;
-  transition: 0.2s ease-in-out;
+  transition: 1s ease-in-out;
 }
 
 @keyframes fadeIn {

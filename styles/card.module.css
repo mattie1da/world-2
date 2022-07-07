@@ -7,7 +7,7 @@
   --secondary: 155, 155, 155;
   background-color: hsl(var(--theme), var(--palette-saturation), var(--palette-darken));
   border-radius: var(--cardBorderRadius);
-  box-shadow: 0rem 1rem 1rem rgba(var(--primary), 0.4);
+  box-shadow: var(--cardBoxShadow);
   color: rgb(var(--tertiary));
   display: flex;
   flex-direction: column;

@@ -84,6 +84,7 @@
   /* elements */
   --borderMarker: 0.1ch;
   --cardBorderRadius: 1.25rem;
+  --cardBoxShadow: 0rem 1rem 1rem rgba(var(--primary), 0.4);
   --cardPadding: 1.5rem 2rem;
   
   /* typography */

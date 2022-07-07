@@ -1,4 +1,5 @@
 import styles from '../styles/palette.module.css';
+import utilStyles from '../styles/utils.module.css';
 import classnames from 'classnames';
 import { useContext, useEffect, useRef } from 'react';
 import { GlobalStateContext } from '../context/themePreferencesContext';
@@ -23,8 +24,6 @@ export const Palette = () => {
     paletteReveal(colorsRef.current);
   }, []);
 
-  const punctuations = ['!', '?', '?!', ' -', '..'];
-
   const renderColors = () => (
     <>
       <PinkColor />
@@ -48,7 +47,7 @@ export const Palette = () => {
             {renderColors()}
             <label
               htmlFor="theme-pink"
-              className={classnames(styles.colorLabel, {
+              className={classnames(utilStyles.fontCute, styles.colorLabel, {
                 [styles.colorLabelActive]: state.color === 'pink'
               })}
             >
@@ -56,7 +55,7 @@ export const Palette = () => {
             </label>
             <label
               htmlFor="theme-red"
-              className={classnames(styles.colorLabel, {
+              className={classnames(utilStyles.fontCute, styles.colorLabel, {
                 [styles.colorLabelActive]: state.color === 'red'
               })}
             >
@@ -64,7 +63,7 @@ export const Palette = () => {
             </label>
             <label
               htmlFor="theme-yellow"
-              className={classnames(styles.colorLabel, {
+              className={classnames(utilStyles.fontCute, styles.colorLabel, {
                 [styles.colorLabelActive]: state.color === 'yellow'
               })}
             >
@@ -72,7 +71,7 @@ export const Palette = () => {
             </label>
             <label
               htmlFor="theme-green"
-              className={classnames(styles.colorLabel, {
+              className={classnames(utilStyles.fontCute, styles.colorLabel, {
                 [styles.colorLabelActive]: state.color === 'green'
               })}
             >
@@ -80,7 +79,7 @@ export const Palette = () => {
             </label>
             <label
               htmlFor="theme-blue"
-              className={classnames(styles.colorLabel, {
+              className={classnames(utilStyles.fontCute, styles.colorLabel, {
                 [styles.colorLabelActive]: state.color === 'blue'
               })}
             >
@@ -88,7 +87,7 @@ export const Palette = () => {
             </label>
             <label
               htmlFor="theme-purple"
-              className={classnames(styles.colorLabel, {
+              className={classnames(utilStyles.fontCute, styles.colorLabel, {
                 [styles.colorLabelActive]: state.color === 'purple'
               })}
             >
@@ -97,7 +96,7 @@ export const Palette = () => {
           </div>
         </div>
 
-        <p className={classnames(styles.compliment)}>
+        <p className={classnames(utilStyles.fontCute, styles.compliment)}>
           {randomItem(compliments)}
         </p>
       </div>

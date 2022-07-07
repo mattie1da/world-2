@@ -37,13 +37,13 @@
   }
 
   .wrapper h2:not(:first-child) {
-    margin-top: var(--space-m);
+    margin-top: var(--space-l);
   }
 }
 
 @media (min-width: 1150px) {
   .wrapper h2:not(:first-child) {
-    margin-top: var(--space-s);
+    margin-top: var(--space-m);
   }
 
   .wrapper h2 {
@@ -56,6 +56,10 @@
 
   .wrapper h3 {
     margin-top: var(--space-s);
+  }
+
+  .wrapper h2 + h3 {
+   margin-top: calc(var(--space-xs) * 1.5); 
   }
 
   .wrapper img {

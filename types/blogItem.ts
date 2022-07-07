@@ -1,14 +1,10 @@
-import { AuthorInterface } from './'
+import { AuthorInterface, ImageInterface } from './'
 
 export interface BlogItemInterface {
   authors: Array<AuthorInterface>,
   description: string,
   id: Number,
-  image: {
-    alt: string,
-    url: string,
-    plaiceholder: string,
-  },
+  image: ImageInterface;
   tag: string,
   title: string,
   publishedAt: string,

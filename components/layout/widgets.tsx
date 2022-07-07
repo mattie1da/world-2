@@ -208,9 +208,6 @@ export const Widgets = ({ featuredArticle }: WidgetsInterface) => {
           </Card>
           <p className={classnames(utilStyles.fontCute, styles.label)}>strava api</p>
         </div>
-        <>
-          <span></span>
-        </>
       </div>
       {/* <div className={styles.camera} ref={(el) => widgets.current[6] = el}>
         <CameraWidget />

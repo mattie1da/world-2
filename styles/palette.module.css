@@ -47,6 +47,12 @@
   display: none;
 }
 
+@media (max-width: 849px) {
+  .palette {
+    margin-right: var(--space-m);
+  }
+}
+
 @media (min-width: 850px) {
   .modesWrapper {
     display: block;

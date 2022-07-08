@@ -42,13 +42,13 @@ export const DateAndTime = () => {
   const [date, setDate] = useState(currentDate());
 
   const cuteWording = () => {
-    const hour = currentTime().hour24.hours;
+    const hour = parseInt(currentTime().hour24.hours);
 
-    if (hour === '12') {
+    if (hour === 12) {
       return "it's lunch time, brb!";
-    } else if (hour >= '13' && hour <= '23') {
+    } else if (hour >= 13 && hour <= 23) {
       return `${time.hour12} for normal people`;
-    } else if (hour <= '6') {
+    } else if (hour <= 6) {
       return "i'm probably sleeping";
     } else {
       return 'good morning! coffee time';

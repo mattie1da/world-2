@@ -169,7 +169,7 @@ export default function Home({ featuredBlogsData, globalSettingsData, villagersD
 }
 
 export async function getStaticProps() {
-  const featuredBlogsData = await getBlogs([6, 5]);
+  const featuredBlogsData = await getBlogs([9, 5]);
   const globalSettingsData = await getGlobalSettings();
   const villagersData = await getVillagers();
 

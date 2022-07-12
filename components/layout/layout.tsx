@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Script from 'next/script';
 import { GlobalStateContext } from '../../context/themePreferencesContext';
 import React, { useContext } from 'react';
 
@@ -16,6 +17,20 @@ export const Layout = ({ children }: LayoutInterface) => {
   return (
     <Theme state={state}>
       <Head>
+        {/* Global site tag (gtag.js) - Google Analytics */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-6G5BJQBNJJ"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+    
+              gtag('config', 'G-6G5BJQBNJJ');  
+            `}
+        </Script>
         <link
           rel="apple-touch-icon"
           sizes="180x180"

@@ -6,7 +6,7 @@
 .wrapper {
   padding-left: var(--space-m);
   padding-right: var(--space-m);
-  margin-bottom: var(--space-m);
+  margin-bottom: var(--space-l);
 }
 
 .grid {
@@ -14,7 +14,7 @@
   grid-column-gap: var(--space-s);
   grid-row-gap: var(--space-m);
   padding-top: 2.5rem;
-  margin: 0 auto var(--space-s);
+  margin: 0 auto;
   max-width: none;
 }
 
@@ -74,7 +74,7 @@
 @media (min-width: 750px) {
   .wrapper {
     padding-left: var(--space-m);
-    margin-bottom: 0;
+    margin-bottom: calc(var(--space-m) * 2);
   }
 
   .grid {
@@ -105,6 +105,9 @@
 }
 
 @media (min-width: 1600px) {
+  .wrapper {
+    margin-bottom: var(--space-m); 
+  }
   .label {
     margin-top: var(--space-xxs);
   }

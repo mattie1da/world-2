@@ -78,7 +78,7 @@ export default function Home({ featuredBlogsData, globalSettingsData, villagersD
                 },
                 {
                   title: 'Database',
-                  description: <>MySQL, Postgre</>
+                  description: <>MySQL, Postgres</>
                 },
                 {
                   title: 'Design',

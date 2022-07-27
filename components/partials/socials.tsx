@@ -38,7 +38,7 @@ export const Socials = () => {
       </li>
       <li>
         <a
-          href="https://twitter.com/mattie1da"
+          href="https://twitter.com/mattie_world"
           aria-label="Opens my social media in a new tab"
           target="_blank"
           className={classnames(styles.link, styles.twitter)}

@@ -49,6 +49,8 @@ export default function Post({ blogData }) {
 
         <meta name="og:title" content={blogData.title} />
         <meta name="og:description" content={blogData.excerpt} />
+        <meta property="og:image" content={blogData.image.url} />
+        <meta property="og:image:type" content="image/jpg" />
       </Head>
       <article>
         <Hero 

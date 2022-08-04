@@ -43,9 +43,7 @@ export const Layout = ({ children }: LayoutInterface) => {
           name="description"
           content="An experienced web designer and developer based in Hampshire, England."
         />
-
-        <meta property="og:image" content="/images/projects/world.png" />
-        <meta property="og:image:type" content="image/png" />
+        
         <meta property="og:image:width" content="1024" />
         <meta property="og:image:height" content="1024" />
 

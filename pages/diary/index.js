@@ -22,6 +22,8 @@ export default function Blogs({ allBlogsData, globalSettingsData, tagsData }) {
 
         <meta name="og:title" content="Matthew Wyatt, Diary" />
         <meta name="og:description" content="A collection of diary entries covering a variety of topics - not just specific to web development." />
+        <meta property="og:image" content="/images/projects/world.png" />
+        <meta property="og:image:type" content="image/png" />
       </Head>
       <BlobTwo />
       <BlobSeven />

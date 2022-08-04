@@ -24,6 +24,8 @@ export default function Home({ featuredBlogsData, globalSettingsData, villagersD
           name="description"
           content={globalSettingsData.defaultSeo.metaDescription}
         />
+        <meta property="og:image" content="/images/projects/world.png" />
+        <meta property="og:image:type" content="image/png" />
       </Head>
       <BlobOne />
       <BlobThree />

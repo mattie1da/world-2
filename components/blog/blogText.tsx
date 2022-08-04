@@ -1,6 +1,4 @@
 import classnames from 'classnames';
-
-import utilStyles from '../../styles/utils.module.css';
 import styles from '../../styles/blog/blogText.module.css';
 
 interface BlogTextInterface {
@@ -10,7 +8,7 @@ interface BlogTextInterface {
 export const BlogText = ({ content }: BlogTextInterface) => {
   return (
     <div
-      className={classnames(utilStyles.articleBody, styles.wrapper)}
+      className={classnames(styles.wrapper)}
       dangerouslySetInnerHTML={{ __html: content }}
     ></div>
   );

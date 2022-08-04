@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import Head from 'next/head'
 import { getAllBlogIDs, getBlog } from '../../lib/blog'
-import { getGlobalSettings } from '../../lib/global'
+import classnames from 'classnames'
 
 import utilStyles from '../../styles/utils.module.css'
 
@@ -77,7 +77,7 @@ export default function Post({ blogData }) {
         <BlobOne />
         <BlobFive />
         <Container thin>
-          <div className={utilStyles.grid} ref={blogRef}>
+          <div className={classnames(utilStyles.grid, utilStyles.gridBlog)} ref={blogRef}>
             <BlogText content={blogData.content} />
             <BlogNavigation progress={progress} />
           </div>

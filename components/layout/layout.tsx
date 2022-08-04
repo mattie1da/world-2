@@ -55,6 +55,7 @@ export const Layout = ({ children }: LayoutInterface) => {
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:image" content="https://mattie.world/images/projects/world.png" />
+        <meta name="author" content="Matthew Wyatt" />
       </Head>
       {/* Global site tag (gtag.js) - Google Analytics */}
       <Script

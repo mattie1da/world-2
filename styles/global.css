@@ -72,7 +72,7 @@
 
   /* layout */
   --containerMaxWidth: 118rem;
-  --articleBodyMaxWidth: 32.5rem;
+  --articleBodyMaxWidth: 52ch;
   
   --space-xs: 0.5rem;
   --space-s: 1.5rem;

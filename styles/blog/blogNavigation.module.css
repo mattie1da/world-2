@@ -30,9 +30,7 @@
 
 @media (min-width: 850px) {
   .wrapper {
-    padding-left: var(--space-s);
     position: sticky;
     top: var(--space-l);
-    width: 75%;
   }
 }

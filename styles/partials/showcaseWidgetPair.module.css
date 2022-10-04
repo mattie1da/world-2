@@ -4,7 +4,8 @@
 }
 
 .animalWrapper {
-  border: 0.2rem solid;
+  border-width: 0.2rem;
+  border-style: solid;
   background-color: hsl(var(--theme), var(--palette-saturation), var(--palette-lightness));
   transition: border-color 0.5s;
   margin: var(--space-xs) 0;

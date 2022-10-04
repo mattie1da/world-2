@@ -12,10 +12,21 @@ import utilStyles from '../styles/utils.module.css'
 import { Layout, Hero, Widgets, SplitContent, Container } from '../components/layout'
 import { Palette, Highlight, List, Article, GlobalLink, Quote, BlobThree, BlobFive, BlobSix, BlobSeven, BlobOne, BlobTwo } from '../components'
 import { Companies, ShowcaseWidgetPair } from '../components/partials' 
+import { useEffect, useState } from 'react'
 
-// types
+export default function Home({ featuredBlogsData, globalSettingsData }) {
+  const [villagersData, setVillagersData] = useState(null)
 
-export default function Home({ featuredBlogsData, globalSettingsData, villagersData }) {
+  const getVillagersData = async () => {
+    const data = await getVillagers();
+
+    setVillagersData(data);
+  }
+
+  useEffect(() => {
+    getVillagersData();
+  }, [])
+
   return (
     <Layout home>
       <Head>
@@ -50,7 +61,7 @@ export default function Home({ featuredBlogsData, globalSettingsData, villagersD
             title: <>I design, <Highlight text="build" /> <span className={utilStyles.textSmoke}>and maintain</span> websites and apps 📱🖥⚡️</>
           }}
           content={
-            <ShowcaseWidgetPair villagersData={villagersData} featuredBlog={featuredBlogsData[1]} />
+            villagersData && <ShowcaseWidgetPair villagersData={villagersData} featuredBlog={featuredBlogsData[1]} />
           }
         />
       </Container>

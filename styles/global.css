@@ -224,6 +224,7 @@ code {
   background-color: hsl(var(--theme), var(--palette-saturation), var(--palette-darken));
   color: rgb(var(--tertiary));
   border-radius: 0.2rem;
+  max-width: 35rem;
   font-size: 0.9rem;
   padding: 0.25rem 0.75rem;
   line-height: 1.5;

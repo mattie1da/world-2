@@ -101,6 +101,12 @@
   }
 }
 
+@media (max-width: 1150px) {
+  .wrapper {
+    margin-bottom: var(--space-m);
+  }
+}
+
 @media (min-width: 1150px) {
   .wrapper {
     margin: var(--space-xs) auto var(--space-m) auto;

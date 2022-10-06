@@ -22,6 +22,11 @@
   margin-bottom: var(--space-xs);
 }
 
+.wrapper pre code {
+  margin: 2rem -2rem;
+  max-width: calc(100% + 4rem);
+}
+
 .wrapper img {
   margin: var(--space-s) -2rem var(--space-s) -2rem;
   max-width: calc(100% + 4rem);

@@ -1,7 +1,5 @@
 import styles from '../styles/article.module.css';
 import { SectionHeading } from './layout';
-import { useEffect, useRef } from 'react';
-import { articleReveal } from './animations/articleReveal';
 
 interface ArticleInterface {
   title: {
@@ -12,13 +10,8 @@ interface ArticleInterface {
 }
 
 export const Article = ({ content, title }: ArticleInterface) => {
-  const headingRef = useRef();
-
-  useEffect(() => {
-    articleReveal(headingRef.current);
-  }, []);
   return (
-    <article ref={headingRef} className={styles.wrapper}>
+    <article className={styles.wrapper}>
       {title && (
         <SectionHeading title={title.title} preTitle={title.preTitle} />
       )}

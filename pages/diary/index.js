@@ -29,12 +29,12 @@ export default function Blogs({ allBlogsData, globalSettingsData, tagsData }) {
       <BlobSeven />
 
       <Hero 
-        title="Diary"
+        title="Diary 🌍"
         lead={
           <>
-            Documenting my thoughts, reflections and lessons learnt
-            on my travels and experiences; standing as a way of solidifying new knowledge and improving my god awful writing skills.
-            <br/><br/>Sometimes dev related, sometimes any old rubbish..
+            Not only is this a space for reinstating and solidifying new knowledge in the web development world - 
+            it's a space to reflect on lessons and adventures in the real world too. I cherish
+            my time away from the keyboard - <strong>there's more to life than sitting at your desk all day! 🐥</strong>
           </>
         }
         withMeta={{

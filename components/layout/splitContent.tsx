@@ -42,7 +42,7 @@ export const SplitContent = () => {
           className={styles.media}
           controls
           loop
-          poster="/videos/beth-larcombe-poster.jpg"
+          poster="/videos/beth-larcombe-poster.webp"
         >
           <source src="/videos/beth-larcombe.mp4" type="video/mp4" />
           <source src="movie.ogg" type="video/ogg" />
@@ -57,7 +57,7 @@ export const SplitContent = () => {
           className={styles.media}
           controls
           loop
-          poster="/videos/st-georges-poster.jpeg"
+          poster="/videos/st-georges-poster.webp"
         >
           <source src="/videos/st-georges.mp4" type="video/mp4" />
           <source src="movie.ogg" type="video/ogg" />

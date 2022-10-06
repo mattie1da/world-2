@@ -11,12 +11,16 @@ export const SplitContent = () => {
         className={classnames(styles.scrollBox, styles.boxGradientTertiary)}
       >
         <div className={styles.media}>
-          <Image
-            src="/images/projects/world-2.jpg"
-            alt="Matthew Wyatt Portfolio Website"
-            layout="fill"
-            objectFit="cover"
-          />
+          <video
+            className={styles.media}
+            controls
+            loop
+            poster="/videos/world-2-poster.webp"
+          >
+            <source src="/videos/world-2.mp4" type="video/mp4" />
+            <source src="movie.ogg" type="video/ogg" />
+            Your browser does not support the video tag.
+          </video>
         </div>
         <figcaption className={styles.caption}>
           World (React, Next.js, Typescript, Strapi)
@@ -26,12 +30,16 @@ export const SplitContent = () => {
         className={classnames(styles.scrollBox, styles.boxGradientPrimary)}
       >
         <div className={styles.media}>
-          <Image
-            src="/images/projects/todooo-today-vue.jpg"
-            alt="Todo Today - Task List"
-            layout="fill"
-            objectFit="cover"
-          />
+          <video
+            className={styles.media}
+            controls
+            loop
+            poster="/videos/todooo-today-poster.webp"
+          >
+            <source src="/videos/todooo-today.mp4" type="video/mp4" />
+            <source src="movie.ogg" type="video/ogg" />
+            Your browser does not support the video tag.
+          </video>
         </div>
         <figcaption className={styles.caption}>Todo List App (Vue)</figcaption>
       </figure>

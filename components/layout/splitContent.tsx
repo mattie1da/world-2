@@ -12,7 +12,7 @@ export const SplitContent = () => {
       >
         <div className={styles.media}>
           <Image
-            src="/images/projects/world.jpg"
+            src="/images/projects/world-2.jpg"
             alt="Matthew Wyatt Portfolio Website"
             layout="fill"
             objectFit="cover"
@@ -27,7 +27,7 @@ export const SplitContent = () => {
       >
         <div className={styles.media}>
           <Image
-            src="/images/projects/todooo-today.jpg"
+            src="/images/projects/todooo-today-vue.jpg"
             alt="Todo Today - Task List"
             layout="fill"
             objectFit="cover"

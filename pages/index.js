@@ -12,20 +12,28 @@ import utilStyles from '../styles/utils.module.css'
 import { Layout, Hero, Widgets, SplitContent, Container } from '../components/layout'
 import { Palette, Highlight, List, Article, GlobalLink, Quote, BlobThree, BlobFive, BlobSix, BlobSeven, BlobOne, BlobTwo } from '../components'
 import { Companies, ShowcaseWidgetPair } from '../components/partials' 
-import { useEffect, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
+import { randomItem } from '../helpers/randomItem'
+import { GlobalStateContext } from '../context/themePreferencesContext'
+import { emojis } from '../lib/emojis'
 
 export default function Home({ featuredBlogsData, globalSettingsData }) {
   const [villagersData, setVillagersData] = useState(null)
+  const { state } = useContext(GlobalStateContext);
+  const [emoji, setEmoji] = useState(null);
 
   const getVillagersData = async () => {
     const data = await getVillagers();
-
     setVillagersData(data);
   }
 
   useEffect(() => {
     getVillagersData();
   }, [])
+
+  useEffect(() => {
+    setEmoji(randomItem(emojis))
+  }, [state.color]);
 
   return (
     <Layout home>
@@ -45,7 +53,7 @@ export default function Home({ featuredBlogsData, globalSettingsData }) {
         title={
           <>
             Hello! I'm <Highlight text="Matthew Wyatt" />; <br/><span className={utilStyles.textSmoke}>a </span>
-            web designer & developer <span className={utilStyles.textSmoke}>based in</span> Hampshire, England &darr;
+            freelance web developer <span className={utilStyles.emoji}>{emoji}</span><span className={utilStyles.desktopOnly}><span className={utilStyles.textSmoke}> based in</span> Hampshire, England &darr;</span>
           </>
         }
       />
@@ -71,7 +79,7 @@ export default function Home({ featuredBlogsData, globalSettingsData }) {
       <Container thin>
         <Article 
           title={{
-            title: <><span className={utilStyles.textSmoke}>Currently:</span> <Highlight text="Available"/><br/>for contract roles 🧸✨</>,
+            title: <><span className={utilStyles.textSmoke}>Currently:</span> <Highlight text="Available"/><br/>for freelance roles 🧸✨</>,
             preTitle: "my skillset & tech stack"
           }}
           content={
@@ -131,18 +139,17 @@ export default function Home({ featuredBlogsData, globalSettingsData }) {
                   </div>
                   <div>
                     <Quote 
-                      text="I was constantly impressed by Matt's excitement for the role. 
-                        He has a great eye for design which became super useful when deadlines were tight.
-                        He was able to mock up designs and then translate them into clean semantic markup. 
-                        Above all, Matt is a great guy who I'm now fortunate enough to call a friend." 
-                      author="Gaz - Director @ Sneek Digital, Farnham"
+                      text="
+                        Matteo is a joy to work with. He cares a lot about the quality of his craft, and his character brightens up
+                        the work place. He makes work fun. Gracias por todo, amigo!" 
+                      author="Maxi - Developer @ Go App Studio, Shopify"
                     />
 
                     <Quote 
-                      text="
-                        Matteo is a joy to work with; he cares a lot about the quality of his craft and his character always shines
-                        in the work place. He makes work fun and exciting. Gracias por todo, amigo!" 
-                      author="Maxi - Developer @ Go App Studio, Shopify"
+                      text="Matt has a great eye for design, which became super useful when deadlines were tight.
+                        He was able to mock up designs and translate them into clean semantic markup. 
+                        Above all, Matt is a great guy who I'm now fortunate enough to call a friend." 
+                      author="Gaz - Director @ Sneek Digital, Farnham"
                     />
                   </div>
                 </div>

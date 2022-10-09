@@ -36,6 +36,12 @@
   align-items: center;
 }
 
+@media (max-width: 849px) {
+  .desktopOnly {
+    display: none;
+  }
+}
+
 @media (min-width: 850px) {
   .grid {
     grid-column-gap: var(--space-s);
@@ -93,4 +99,18 @@
 
 .articleBodyLarge {
   font-size: var(--bodyLarge);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.emoji {
+  opacity: 0;
+  animation: 1s fadeIn 1s ease-in-out forwards;
 }

@@ -46,15 +46,14 @@ export const ShowcaseWidgetPair = ({ villagersData, featuredBlog }) => {
       )}
     >
       <div className={styles.content}>
+        <h3>
+          ... but mainly just build tbh 🕸
+        </h3>
         <p>
-          With 5 years of experience, I've worn a few different hats and titles;{' '}
-          <strong>Front-end Developer</strong>, Full Stack Developer, and more
-          recently '<strong>Creative Developer</strong>'.
-        </p>
-        <p>
-          As a <strong>freelancer</strong> / <strong>contractor</strong>; I
-          operate periodically, either independently or integrated into an
-          existing team.
+          <i>Software Engineer, Fullstack Developer, wind-up merchant...</i> <br/>
+          I've been called a lot of things in the last 5 years - nowadays, <strong>Creative Developer</strong> tends to stick the most. 
+          A mix of design, front-end (my bread & butter), and a technical fullstack challenge is where I shine.
+          Some back-end, to learn as I go, is a plus!
         </p>
       </div>
       <Card type="blog">
@@ -171,15 +170,16 @@ export const ShowcaseWidgetPair = ({ villagersData, featuredBlog }) => {
       <div className={styles.content}>
         <h3>Approach</h3>
         <p>
-          My aim is to deliver a product that{' '}
-          <strong>withstands the test of time</strong>. I prioritise{' '}
-          <strong>communication</strong>, well-written{' '}
-          <strong>documentation</strong>, component <strong>reusability</strong>
-          , <strong>accessibility</strong> and <strong>consistency</strong>.
+          Deliver on time: organisation, communication, documentation.
+          Withstand the test of time: performance, accessibility, reusability.
           <br />
         </p>
         <p className={classnames(utilStyles.fontCute, utilStyles.textSmoke)}>
           "One day, son, all this legacy code will be yours."
+        </p>
+        <p>
+          I operate periodically, as a <strong>contractor</strong> or <strong>freelancer</strong>, either independently or integrated into an
+          existing team.
         </p>
       </div>
     </div>

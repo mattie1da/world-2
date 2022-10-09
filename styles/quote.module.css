@@ -31,17 +31,13 @@
 }
 
 @media (min-width: 850px) {
-  .quote, .author {
-    padding-left: var(--space-xs);
-  }
-  
   .wrapper {
     margin-bottom: var(--space-s);
   }
 
   .wrapper:before {
-    font-size: 10rem;
+    font-size: 7rem;
     left: -2rem;
-    top: -8rem;
+    top: -6rem;
   }
 }

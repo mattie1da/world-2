@@ -32,7 +32,7 @@ export default function Blogs({ allBlogsData, globalSettingsData, tagsData }) {
         title="Diary 🌍"
         lead={
           <>
-            Not only is this a space for reinstating and solidifying new knowledge in the web development world - 
+            Not only is this a space for reinforcing and solidifying new knowledge in the web development world - 
             it's a space to reflect on lessons and adventures in the real world too. I cherish
             my time away from the keyboard - <strong>there's more to life than sitting at your desk all day! 🐥</strong>
           </>

@@ -53,7 +53,11 @@ export default function Home({ featuredBlogsData, globalSettingsData }) {
         title={
           <>
             Hello! I'm <Highlight text="Matthew Wyatt" />; <br/><span className={utilStyles.textSmoke}>a </span>
-            freelance web developer <span className={utilStyles.emoji}>{emoji}</span><span className={utilStyles.desktopOnly}><span className={utilStyles.textSmoke}> based in</span> Hampshire, England &darr;</span>
+            freelance web developer <span className={utilStyles.emoji}>{emoji}</span>
+            <span className={utilStyles.desktopOnly}>
+              <span className={utilStyles.textSmoke}> based in</span> Hampshire, England 
+              <span className={utilStyles.textSmoke}>&darr;</span>
+            </span>
           </>
         }
       />

@@ -102,7 +102,7 @@ export const Palette = () => {
       </div>
       <div className={styles.modesWrapper}>
         <p className={styles.label}>
-          Choose your lighting <span> - what's the vibe?</span>
+          Choose your lighting <span> - protect those eyes!</span>
         </p>
 
         <Mode updateThemePreferences={updateThemePreferences} state={state} />

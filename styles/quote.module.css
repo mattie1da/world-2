@@ -32,12 +32,24 @@
 
 @media (min-width: 850px) {
   .wrapper {
-    margin-bottom: var(--space-s);
+    margin-bottom: var(--space-m);
   }
 
   .wrapper:before {
     font-size: 7rem;
     left: -2rem;
     top: -6rem;
+  }
+}
+
+@media (min-width: 1150px) {
+  .wrapper {
+    margin-bottom: var(--space-m);
+  }
+}
+
+@media (min-width: 1700px) {
+  .wrapper {
+    margin-bottom: var(--space-s);
   }
 }

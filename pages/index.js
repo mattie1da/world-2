@@ -226,16 +226,21 @@ export default function Home({ featuredBlogsData, globalSettingsData }) {
                   <div>
                     <Quote
                       text="
-                        Matteo is a joy to work with. He cares a lot about the quality of his craft, and his character brightens up
-                        the work place. He makes work fun. Gracias por todo, amigo!"
+                        Matteo is a joy to work with. He cares about the quality of his craft and his character brightens up
+                        the work place. Gracias por todo, amigo!"
                       author="Maxi - Developer @ Go App Studio, Shopify"
                     />
 
                     <Quote
-                      text="Matt has a great eye for design, which became super useful when deadlines were tight.
+                      text="Matt has a great eye for design which became useful when deadlines were tight.
                         He was able to mock up designs and translate them into clean semantic markup. 
                         Above all, Matt is a great guy who I'm now fortunate enough to call a friend."
                       author="Gaz - Director @ Sneek Digital, Farnham"
+                    />
+
+                    <Quote
+                      text="Matt is excellent from start to finish. He elevates every design he touches, bringing expertise in thoughtful user experience as well as considered visual touches. Supremely easy to talk to, responsive and just an absolute pleasure to work with."
+                      author="Beth - Graphic Designer"
                     />
                   </div>
                 </div>

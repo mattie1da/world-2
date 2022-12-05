@@ -4,9 +4,9 @@
   font-style: normal;
   font-display: swap;
   font-weight: 400;
-  src: local(''),
-       url('../fonts/inter-v11-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('../fonts/inter-v11-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  src: local(''), url('../fonts/inter-v11-latin-regular.woff2') format('woff2'),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url('../fonts/inter-v11-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 /* inter-700 - latin */
 @font-face {
@@ -14,9 +14,9 @@
   font-style: normal;
   font-display: swap;
   font-weight: 700;
-  src: local(''),
-       url('../fonts/inter-v11-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('../fonts/inter-v11-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  src: local(''), url('../fonts/inter-v11-latin-700.woff2') format('woff2'),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url('../fonts/inter-v11-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
 /* gaegu-regular - latin */
@@ -25,9 +25,9 @@
   font-style: normal;
   font-display: swap;
   font-weight: 400;
-  src: local(''),
-       url('../fonts/gaegu-v15-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('../fonts/gaegu-v15-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  src: local(''), url('../fonts/gaegu-v15-latin-regular.woff2') format('woff2'),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url('../fonts/gaegu-v15-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 /* gaegu-700 - latin */
 @font-face {
@@ -35,11 +35,10 @@
   font-style: normal;
   font-display: swap;
   font-weight: 700;
-  src: local(''),
-       url('../fonts/gaegu-v15-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('../fonts/gaegu-v15-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  src: local(''), url('../fonts/gaegu-v15-latin-700.woff2') format('woff2'),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url('../fonts/gaegu-v15-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
-
 
 :root {
   /* colours */
@@ -73,7 +72,7 @@
   /* layout */
   --containerMaxWidth: 118rem;
   --articleBodyMaxWidth: 52ch;
-  
+
   --space-xs: 0.5rem;
   --space-s: 1.5rem;
   --space-m: 2rem;
@@ -86,7 +85,7 @@
   --cardBorderRadius: 1.25rem;
   --cardBoxShadow: 0rem 1rem 1rem rgba(var(--primary), 0.4);
   --cardPadding: 1.5rem 2rem;
-  
+
   /* typography */
   --baseFontColor: var(--primary);
 
@@ -95,10 +94,10 @@
   --heading2: clamp(2rem, 3.4vw, 4.5rem);
   --heading3: clamp(1.3rem, 2.5vw, 1.6rem);
   --heading4: clamp(1.1rem, 1.8vw, 1.2rem);
-  
-  --fontInter: 'Inter', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  --fontCute: 'Gaegu', cursive;
 
+  --fontInter: 'Inter', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  --fontCute: 'Gaegu', cursive;
 }
 
 @media (min-width: 850px) {
@@ -116,9 +115,9 @@
 @media (min-width: 1150px) {
   :root {
     --space-xxs: 1rem;
-    --space-xs: 2rem;
+    --space-xs: 2.5rem;
     --space-s: 3rem;
-    --space-m: 6rem;
+    --space-m: 8rem;
     --space-l: 16rem;
     --space-xl: 24rem;
   }
@@ -147,14 +146,18 @@ body {
   line-height: 1.5;
   letter-spacing: -0.02ch;
   font-size: 16px;
-  
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 mark {
   color: white;
-  background-color: hsl(var(--theme), var(--palette-saturation), var(--palette-darken));
+  background-color: hsl(
+    var(--theme),
+    var(--palette-saturation),
+    var(--palette-darken)
+  );
 }
 
 * {
@@ -176,7 +179,8 @@ a:hover {
 }
 
 a:focus-visible {
-  outline: 5px solid hsl(var(--theme), var(--palette-saturation), var(--palette-lightness));
+  outline: 5px solid
+    hsl(var(--theme), var(--palette-saturation), var(--palette-lightness));
 }
 
 img {
@@ -199,7 +203,9 @@ h1 {
   margin-top: 0;
 }
 
-h2, h3, h4 { 
+h2,
+h3,
+h4 {
   line-height: 1.2;
   margin: 0;
 }
@@ -221,7 +227,11 @@ h4 {
 }
 
 code {
-  background-color: hsl(var(--theme), var(--palette-saturation), var(--palette-darken));
+  background-color: hsl(
+    var(--theme),
+    var(--palette-saturation),
+    var(--palette-darken)
+  );
   color: rgb(var(--tertiary));
   border-radius: 0.2rem;
   max-width: 35rem;

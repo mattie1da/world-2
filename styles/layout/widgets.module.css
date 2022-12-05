@@ -1,6 +1,10 @@
 @keyframes fadeIn {
-  0% { opacity: 0 }
-  100% { opacity: 1 }
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .wrapper {
@@ -53,7 +57,9 @@
     padding-top: 2.5rem;
   }
 
-  .strava, .blog, .tall {
+  .strava,
+  .blog,
+  .tall {
     grid-row: span 2;
   }
 }
@@ -80,19 +86,22 @@
   .grid {
     grid-template-columns: 1fr 1fr;
   }
-  
+
   .tall {
     grid-column: 1;
     grid-row: 1;
     grid-row: span 2;
   }
-  
+
   .label {
     margin-top: var(--space-xs);
   }
 }
 
 @media (min-width: 1150px) {
+  .wrapper {
+    margin-bottom: var(--space-m);
+  }
   .grid {
     grid-gap: var(--space-xs);
     grid-template-columns: 1fr 1fr 1fr;
@@ -104,17 +113,13 @@
   }
 }
 
-@media (min-width: 1600px) {
-  .wrapper {
-    margin-bottom: var(--space-m); 
-  }
+@media (min-width: 1700px) {
   .label {
     margin-top: var(--space-xxs);
   }
 
   .grid {
     align-items: center;
-    margin-bottom: var(--space-s);
     max-width: var(--containerMaxWidth);
   }
 }

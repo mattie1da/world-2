@@ -21,3 +21,15 @@
     margin-bottom: var(--space-m);
   }
 }
+
+@media (min-width: 1150px) {
+  .wrapper {
+    margin-bottom: calc(var(--space-m) * 2);
+  }
+}
+
+@media (min-width: 1700px) {
+  .wrapper {
+    margin-bottom: var(--space-m);
+  }
+}

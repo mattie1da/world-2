@@ -1,38 +1,58 @@
 // setup
-import Head from 'next/head'
-import classnames from 'classnames'
-import { getBlogs } from '../lib/blog'
-import { getGlobalSettings } from '../lib/global'
-import { getVillagers } from '../lib/villagers'
+import Head from 'next/head';
+import classnames from 'classnames';
+import { getBlogs } from '../lib/blog';
+import { getGlobalSettings } from '../lib/global';
+import { getVillagers } from '../lib/villagers';
 
 // styles
-import utilStyles from '../styles/utils.module.css'
+import utilStyles from '../styles/utils.module.css';
 
 // components
-import { Layout, Hero, Widgets, SplitContent, Container } from '../components/layout'
-import { Palette, Highlight, List, Article, GlobalLink, Quote, BlobThree, BlobFive, BlobSix, BlobSeven, BlobOne, BlobTwo } from '../components'
-import { Companies, ShowcaseWidgetPair } from '../components/partials' 
-import { useContext, useEffect, useState } from 'react'
-import { randomItem } from '../helpers/randomItem'
-import { GlobalStateContext } from '../context/themePreferencesContext'
-import { emojis } from '../lib/emojis'
+import {
+  Layout,
+  Hero,
+  Widgets,
+  SplitContent,
+  Container,
+  SectionHeading
+} from '../components/layout';
+import {
+  Palette,
+  Highlight,
+  List,
+  Article,
+  GlobalLink,
+  Quote,
+  BlobThree,
+  BlobFive,
+  BlobSix,
+  BlobSeven,
+  BlobOne,
+  BlobTwo
+} from '../components';
+import { Companies, ShowcaseWidgetPair } from '../components/partials';
+import { useContext, useEffect, useState } from 'react';
+import { randomItem } from '../helpers/randomItem';
+import { GlobalStateContext } from '../context/themePreferencesContext';
+import { emojis } from '../lib/emojis';
 
 export default function Home({ featuredBlogsData, globalSettingsData }) {
-  const [villagersData, setVillagersData] = useState(null)
+  const [villagersData, setVillagersData] = useState(null);
   const { state } = useContext(GlobalStateContext);
   const [emoji, setEmoji] = useState(null);
 
   const getVillagersData = async () => {
     const data = await getVillagers();
     setVillagersData(data);
-  }
+  };
 
   useEffect(() => {
     getVillagersData();
-  }, [])
+  }, []);
 
   useEffect(() => {
-    setEmoji(randomItem(emojis))
+    setEmoji(randomItem(emojis));
   }, [state.color]);
 
   return (
@@ -52,10 +72,13 @@ export default function Home({ featuredBlogsData, globalSettingsData }) {
         home
         title={
           <>
-            Hello! I'm <Highlight text="Matthew Wyatt" />; <br/><span className={utilStyles.textSmoke}>a </span>
-            freelance web developer <span className={utilStyles.emoji}>{emoji}</span>
+            Hello! I'm <Highlight text="Matthew Wyatt" />; <br />
+            <span className={utilStyles.textSmoke}>a </span>
+            freelance web developer{' '}
+            <span className={utilStyles.emoji}>{emoji}</span>
             <span className={utilStyles.desktopOnly}>
-              <span className={utilStyles.textSmoke}> based in</span> Hampshire, England 
+              <span className={utilStyles.textSmoke}> based in</span> Hampshire,
+              England
               <span className={utilStyles.textSmoke}>&darr;</span>
             </span>
           </>
@@ -63,17 +86,40 @@ export default function Home({ featuredBlogsData, globalSettingsData }) {
       />
       <Palette />
       <BlobSeven />
+      <Container thin>
+        <SectionHeading
+          preTitle={"i've said yes to too many things!!!"}
+          title={
+            <>
+              <Highlight text="Unavailable" />
+              <span className={utilStyles.textSmoke}> for more work </span>
+              until the new year! 🎄🎅🏼✨
+            </>
+          }
+        />
+      </Container>
       <Widgets featuredArticle={featuredBlogsData[0]} />
       <BlobFive />
       <BlobSix />
       <Container thin>
-        <Article 
+        <Article
           title={{
-            preTitle: "lower back pain",
-            title: <>I design, <Highlight text="build" /> <span className={utilStyles.textSmoke}>and maintain</span> websites and apps 📱🖥⚡️</>
+            preTitle: 'lower back pain',
+            title: (
+              <>
+                I design, <Highlight text="build" />{' '}
+                <span className={utilStyles.textSmoke}>and maintain</span>{' '}
+                websites and apps 📱🖥⚡️
+              </>
+            )
           }}
           content={
-            villagersData && <ShowcaseWidgetPair villagersData={villagersData} featuredBlog={featuredBlogsData[1]} />
+            villagersData && (
+              <ShowcaseWidgetPair
+                villagersData={villagersData}
+                featuredBlog={featuredBlogsData[1]}
+              />
+            )
           }
         />
       </Container>
@@ -81,78 +127,114 @@ export default function Home({ featuredBlogsData, globalSettingsData }) {
       <BlobSeven />
       <BlobTwo />
       <Container thin>
-        <Article 
+        <Article
           title={{
-            title: <><span className={utilStyles.textSmoke}>Currently:</span> <Highlight text="Available"/><br/>for freelance roles 🧸✨</>,
-            preTitle: "my skillset & tech stack"
+            title: <>What I work with:</>
           }}
           content={
             <>
-              <List items={[
-                {
-                  title: 'Animation',
-                  description: <>Barba, GSAP, React Transition</>
-                },
-                {
-                  title: 'CMS',
-                  description: <>Kentico, Strapi<span className={utilStyles.textSmoke}>, Umbraco, Wordpress</span></>
-                },
-                {
-                  title: 'CSS',
-                  description: <>BEM, Modules, SCSS, Tailwind, Variables</>
-                },
-                {
-                  title: 'Database',
-                  description: <>MySQL, Postgres</>
-                },
-                {
-                  title: 'Design',
-                  description: <>Adobe XD, Figma, Sketch</>
-                },
-                {
-                  title: 'E-commerce',
-                  description: <>Shopify, Polaris, <span className={utilStyles.textSmoke}>WooCommerce</span></>
-                },
-                {
-                  title: 'HTML',
-                  description: <>Yes</>
-                },
-                {
-                  title: 'Javascript',
-                  description: <>ES6, <strong>Typescript</strong>, <strong>React</strong> x Next, <strong>Vue</strong> x Nuxt</>
-                },
-                {
-                  title: 'Misc.',
-                  description: <>Agile, Bitbucket, Git, Jira, Miro, Trello</>
-                }
-              ]} />
+              <List
+                items={[
+                  {
+                    title: 'Animation',
+                    description: <>Barba, GSAP, React Transition</>
+                  },
+                  {
+                    title: 'CMS',
+                    description: (
+                      <>
+                        Kentico, Strapi
+                        <span className={utilStyles.textSmoke}>
+                          , Umbraco, Wordpress
+                        </span>
+                      </>
+                    )
+                  },
+                  {
+                    title: 'CSS',
+                    description: <>BEM, Modules, SCSS, Tailwind, Variables</>
+                  },
+                  {
+                    title: 'Database',
+                    description: <>MySQL, Postgres</>
+                  },
+                  {
+                    title: 'Design',
+                    description: <>Adobe XD, Figma, Sketch</>
+                  },
+                  {
+                    title: 'E-commerce',
+                    description: (
+                      <>
+                        Shopify, Polaris,{' '}
+                        <span className={utilStyles.textSmoke}>
+                          WooCommerce
+                        </span>
+                      </>
+                    )
+                  },
+                  {
+                    title: 'HTML',
+                    description: <>Yes</>
+                  },
+                  {
+                    title: 'Javascript',
+                    description: (
+                      <>
+                        ES6, <strong>Typescript</strong>, <strong>React</strong>{' '}
+                        x Next, <strong>Vue</strong> x Nuxt
+                      </>
+                    )
+                  },
+                  {
+                    title: 'Misc.',
+                    description: <>Agile, Bitbucket, Git, Jira, Miro, Trello</>
+                  }
+                ]}
+              />
               <div>
-                <div className={classnames(utilStyles.grid, utilStyles.gridThin)}>
-                  <div className={classnames(utilStyles.articleBody, utilStyles.articleBodyLarge)}>
+                <div
+                  className={classnames(utilStyles.grid, utilStyles.gridThin)}
+                >
+                  <div
+                    className={classnames(
+                      utilStyles.articleBody,
+                      utilStyles.articleBodyLarge
+                    )}
+                  >
                     <h3>Get in touch</h3>
                     <p>
-                      I’ve worked in a variety of environments, ranging from ambitious <strong>start-ups</strong> to well established <strong>products</strong> and <strong>agencies</strong>.
-                      On the way, I’ve been lucky enough to work with some <strong>stellar</strong> people - some of which remain my closest friends today. 😋
+                      I’ve worked in a variety of environments, ranging from
+                      ambitious <strong>start-ups</strong> to well established{' '}
+                      <strong>products</strong> and <strong>agencies</strong>.
+                      On the way, I’ve been lucky enough to work with some{' '}
+                      <strong>stellar</strong> people - some of which remain my
+                      closest friends today. 😋
                     </p>
                     <p>
-                      Because of this, I prefer the <strong>comradery</strong> and <strike>banter</strike> social aspect involved when <strong>working in a team</strong>. 
-                      I tend to gravitate towards those types of roles.
+                      Because of this, I prefer the <strong>comradery</strong>{' '}
+                      and <strike>banter</strike> social aspect involved when{' '}
+                      <strong>working in a team</strong>. I tend to gravitate
+                      towards those types of roles.
                     </p>
-                    <GlobalLink text="hello@mattie.world" url="mailto:hello@mattie.world" />
+                    <GlobalLink
+                      text="hello@mattie.world"
+                      url="mailto:hello@mattie.world"
+                    />
                     <Companies />
                   </div>
                   <div>
-                    <Quote 
+                    <Quote
                       text="
                         Matteo is a joy to work with. He cares a lot about the quality of his craft, and his character brightens up
-                        the work place. He makes work fun. Gracias por todo, amigo!" 
+                        the work place. He makes work fun. Gracias por todo, amigo!"
                       author="Maxi - Developer @ Go App Studio, Shopify"
                     />
 
-                    <Quote 
+                    <Quote
                       text="Matt has a great eye for design, which became super useful when deadlines were tight.
                         He was able to mock up designs and translate them into clean semantic markup. 
-                        Above all, Matt is a great guy who I'm now fortunate enough to call a friend." 
+                        Above all, Matt is a great guy who I'm now fortunate enough to call a friend."
                       author="Gaz - Director @ Sneek Digital, Farnham"
                     />
                   </div>
@@ -189,7 +271,7 @@ export default function Home({ featuredBlogsData, globalSettingsData }) {
       </Container> */}
       <BlobFive />
     </Layout>
-  )
+  );
 }
 
 export async function getStaticProps() {
@@ -203,5 +285,5 @@ export async function getStaticProps() {
       globalSettingsData,
       villagersData
     }
-  }
+  };
 }

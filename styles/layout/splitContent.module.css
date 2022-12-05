@@ -19,7 +19,11 @@
 
 .media {
   aspect-ratio: 1005 / 500;
-  background-color: hsl(var(--theme), var(--palette-saturation), var(--palette-lightness));
+  background-color: hsl(
+    var(--theme),
+    var(--palette-saturation),
+    var(--palette-lightness)
+  );
   border-radius: 0.75rem;
   box-shadow: 0rem 0.5rem 1rem rgb(var(--primary));
   overflow: hidden;
@@ -37,7 +41,11 @@
 
 /* move */
 .scrollBox {
-  background: linear-gradient(to top left, hsl(var(--red), var(--palette-saturation), var(--palette-lightness)), hsl(var(--purple), var(--palette-saturation), var(--palette-lightness)));
+  background: linear-gradient(
+    to top left,
+    hsl(var(--red), var(--palette-saturation), var(--palette-lightness)),
+    hsl(var(--purple), var(--palette-saturation), var(--palette-lightness))
+  );
   /* border-radius: 1rem; */
   padding: 2rem;
   display: grid;
@@ -46,19 +54,35 @@
 }
 
 .scrollBox.boxGradientPrimary {
-  background: linear-gradient(to top left, hsl(var(--green), var(--palette-saturation), var(--palette-lightness)), hsl(var(--blue), var(--palette-saturation), var(--palette-lightness)));
+  background: linear-gradient(
+    to top left,
+    hsl(var(--green), var(--palette-saturation), var(--palette-lightness)),
+    hsl(var(--blue), var(--palette-saturation), var(--palette-lightness))
+  );
 }
 
 .scrollBox.boxGradientSecondary {
-  background: linear-gradient(to top left, hsl(var(--pink), var(--palette-saturation), var(--palette-lightness)), hsl(var(--yellow), var(--palette-saturation), var(--palette-lightness)));
+  background: linear-gradient(
+    to top left,
+    hsl(var(--pink), var(--palette-saturation), var(--palette-lightness)),
+    hsl(var(--yellow), var(--palette-saturation), var(--palette-lightness))
+  );
 }
 
 .scrollBox.boxGradientTertiary {
-  background: linear-gradient(to top left, hsl(var(--blue), var(--palette-saturation), var(--palette-lightness)), hsl(var(--purple), var(--palette-saturation), var(--palette-lightness)));
+  background: linear-gradient(
+    to top left,
+    hsl(var(--blue), var(--palette-saturation), var(--palette-lightness)),
+    hsl(var(--purple), var(--palette-saturation), var(--palette-lightness))
+  );
 }
 
 .scrollBox.boxGradientQuad {
-  background: linear-gradient(to top left, hsl(var(--yellow), var(--palette-saturation), var(--palette-lightness)), hsl(var(--red), var(--palette-saturation), var(--palette-lightness)));
+  background: linear-gradient(
+    to top left,
+    hsl(var(--yellow), var(--palette-saturation), var(--palette-lightness)),
+    hsl(var(--red), var(--palette-saturation), var(--palette-lightness))
+  );
 }
 
 @media (min-width: 850px) {

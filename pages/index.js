@@ -88,12 +88,14 @@ export default function Home({ featuredBlogsData, globalSettingsData }) {
       <BlobSeven />
       <Container thin>
         <SectionHeading
-          preTitle={"i've said yes to too many things!!!"}
+          preTitle={
+            'currently in a 6 month contract from jan – july (four days per week)'
+          }
           title={
             <>
-              <Highlight text="Unavailable" />
-              <span className={utilStyles.textSmoke}> for more work </span>
-              until the new year! 🎄🎅🏼✨
+              <Highlight text="Available" />
+              <span className={utilStyles.textSmoke}> one day per week</span>
+              &nbsp;until July 2023 ☀️
             </>
           }
         />

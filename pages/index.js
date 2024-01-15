@@ -86,20 +86,6 @@ export default function Home({ featuredBlogsData, globalSettingsData }) {
       />
       <Palette />
       <BlobSeven />
-      <Container thin>
-        <SectionHeading
-          preTitle={
-            'currently in a 6 month contract from jan – july (four days per week)'
-          }
-          title={
-            <>
-              <Highlight text="Available" />
-              <span className={utilStyles.textSmoke}> one day per week</span>
-              &nbsp;until July 2023 ☀️
-            </>
-          }
-        />
-      </Container>
       <Widgets featuredArticle={featuredBlogsData[0]} />
       <BlobFive />
       <BlobSix />
